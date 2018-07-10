@@ -1,0 +1,92 @@
+|vgasync
+vgahs <= tela:inst.vgahs
+clk => clk_pixel:inst1.clk
+vgavs <= tela:inst.vgavs
+vgab[0] <= tela:inst.vgab[0]
+vgab[1] <= tela:inst.vgab[1]
+vgab[2] <= tela:inst.vgab[2]
+vgab[3] <= tela:inst.vgab[3]
+vgag[0] <= tela:inst.vgag[0]
+vgag[1] <= tela:inst.vgag[1]
+vgag[2] <= tela:inst.vgag[2]
+vgag[3] <= tela:inst.vgag[3]
+vgar[0] <= tela:inst.vgar[0]
+vgar[1] <= tela:inst.vgar[1]
+vgar[2] <= tela:inst.vgar[2]
+vgar[3] <= tela:inst.vgar[3]
+
+
+|vgasync|tela:inst
+clk => sync:C1.clk
+vgahs <= sync:C1.hsync
+vgavs <= sync:C1.vsync
+vgar[0] <= sync:C1.r[0]
+vgar[1] <= sync:C1.r[1]
+vgar[2] <= sync:C1.r[2]
+vgar[3] <= sync:C1.r[3]
+vgag[0] <= sync:C1.g[0]
+vgag[1] <= sync:C1.g[1]
+vgag[2] <= sync:C1.g[2]
+vgag[3] <= sync:C1.g[3]
+vgab[0] <= sync:C1.b[0]
+vgab[1] <= sync:C1.b[1]
+vgab[2] <= sync:C1.b[2]
+vgab[3] <= sync:C1.b[3]
+
+
+|vgasync|tela:inst|sync:C1
+clk => vsync~reg0.CLK
+clk => hsync~reg0.CLK
+clk => v[0].CLK
+clk => v[1].CLK
+clk => v[2].CLK
+clk => v[3].CLK
+clk => v[4].CLK
+clk => v[5].CLK
+clk => v[6].CLK
+clk => v[7].CLK
+clk => v[8].CLK
+clk => v[9].CLK
+clk => h[0].CLK
+clk => h[1].CLK
+clk => h[2].CLK
+clk => h[3].CLK
+clk => h[4].CLK
+clk => h[5].CLK
+clk => h[6].CLK
+clk => h[7].CLK
+clk => h[8].CLK
+clk => h[9].CLK
+clk => b[0]~reg0.CLK
+clk => b[1]~reg0.CLK
+clk => b[2]~reg0.CLK
+clk => b[3]~reg0.CLK
+clk => g[0]~reg0.CLK
+clk => g[1]~reg0.CLK
+clk => g[2]~reg0.CLK
+clk => g[3]~reg0.CLK
+clk => r[0]~reg0.CLK
+clk => r[1]~reg0.CLK
+clk => r[2]~reg0.CLK
+clk => r[3]~reg0.CLK
+hsync <= hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vsync <= vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[0] <= r[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= r[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= r[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= r[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+g[0] <= g[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+g[1] <= g[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+g[2] <= g[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+g[3] <= g[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b[0] <= b[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b[1] <= b[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b[2] <= b[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b[3] <= b[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vgasync|clk_pixel:inst1
+div_two <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+
+

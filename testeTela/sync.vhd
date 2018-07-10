@@ -1,0 +1,61 @@
+LIBRARY IEEE;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+ENTITY sync IS
+PORT(
+	clk : in std_logic;	
+	hsync : out std_logic;
+	vsync : out std_logic;
+	r : out std_logic_vector(3 DOWNTO 0);
+	g : out std_logic_vector(3 DOWNTO 0);
+	b : out std_logic_vector(3 DOWNTO 0)
+);
+END sync;
+
+ARCHITECTURE behavior OF sync IS
+SIGNAL h : INTEGER RANGE 0 TO 800;
+SIGNAL v : INTEGER RANGE 0 TO 525;
+BEGIN 
+PROCESS(clk)
+BEGIN
+	IF(rising_edge(clk)) THEN
+	
+		IF(h=480 OR h=152 OR h=791 OR v=36 OR v=515 OR (((h>156 AND h<166) OR (h>777 AND h<787)) AND v>250 AND v<302)) THEN 	--offsets: H=160, V=45
+			r<=(OTHERS => '1');
+			g<=(OTHERS => '0');
+			b<=(OTHERS => '1');
+		ELSE
+			r<=(OTHERS => '0');
+			g<=(OTHERS => '0');
+			b<=(OTHERS => '0');
+		END IF;
+		
+		IF(h<800) THEN
+			h <= h + 1;
+		ELSE
+			h <= 0;
+			IF(v<525) THEN
+				v <= v + 1;
+			ELSE
+				v <= 0;
+			END IF;
+		END IF;
+		IF(h>8 AND h<104) THEN
+			hsync <= '0';
+		ELSE
+			hsync <= '1';
+		END IF;
+		IF(v>2 AND v<4) THEN
+			vsync <= '0';
+		ELSE
+			vsync <= '1';
+		END IF;
+		IF((h>0 AND h<144)OR(v>0 AND v<29))THEN
+			r<=(OTHERS => '0');
+			g<=(OTHERS => '0');
+			b<=(OTHERS => '0');
+		END IF;
+	END IF;	
+END PROCESS;
+END behavior;
