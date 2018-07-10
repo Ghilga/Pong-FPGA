@@ -14,7 +14,7 @@ begin
 	process (clk)
 		begin
 		if(rising_edge(clk)) then
-			if(count >= "1100001101010000") then
+			if(count >= "0110000110101000") then
 				count <= "0000000000000001";
 				umMs <= not umMs;
 			else

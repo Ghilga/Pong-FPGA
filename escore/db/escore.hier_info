@@ -1,0 +1,173 @@
+|Block1
+ledA <= Display7Segmentos:inst1.ledA
+Clk => contador:inst2.clk
+ledB <= Display7Segmentos:inst1.ledB
+ledC <= Display7Segmentos:inst1.ledC
+ledD <= Display7Segmentos:inst1.ledD
+ledE <= Display7Segmentos:inst1.ledE
+ledF <= Display7Segmentos:inst1.ledF
+ledG <= Display7Segmentos:inst1.ledG
+
+
+|Block1|Display7Segmentos:inst1
+ledA <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A3 => FuncaoA:inst.A
+A3 => FuncaoB:inst4.A
+A3 => FuncaoC:inst5.A
+A3 => FuncaoD:inst6.A
+A3 => FuncaoE:inst7.A
+A3 => FuncaoG:inst9.A
+A3 => FuncaoF:inst8.A
+A2 => FuncaoA:inst.B
+A2 => FuncaoB:inst4.B
+A2 => FuncaoC:inst5.B
+A2 => FuncaoD:inst6.B
+A2 => FuncaoE:inst7.B
+A2 => FuncaoG:inst9.B
+A2 => FuncaoF:inst8.B
+A1 => FuncaoA:inst.C
+A1 => FuncaoB:inst4.C
+A1 => FuncaoC:inst5.C
+A1 => FuncaoD:inst6.C
+A1 => FuncaoE:inst7.C
+A1 => FuncaoG:inst9.C
+A1 => FuncaoF:inst8.C
+A0 => FuncaoA:inst.D
+A0 => FuncaoB:inst4.D
+A0 => FuncaoC:inst5.D
+A0 => FuncaoD:inst6.D
+A0 => FuncaoE:inst7.D
+A0 => FuncaoG:inst9.D
+A0 => FuncaoF:inst8.D
+ledB <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ledC <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ledD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+ledE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+ledG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+ledF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|Display7Segmentos:inst1|FuncaoA:inst
+Fa <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst9.IN0
+A => inst4.IN0
+A => inst1.IN0
+C => inst.IN1
+C => inst3.IN1
+C => inst11.IN0
+D => inst12.IN0
+D => inst2.IN2
+B => inst3.IN0
+B => inst10.IN0
+B => inst2.IN1
+
+
+|Block1|Display7Segmentos:inst1|FuncaoB:inst4
+Fb <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+C => inst5.IN0
+C => inst8.IN1
+A => inst3.IN0
+A => inst1.IN0
+D => inst6.IN0
+D => inst8.IN2
+D => inst1.IN2
+
+
+|Block1|Display7Segmentos:inst1|FuncaoC:inst5
+Fc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst1.IN0
+C => inst8.IN0
+D => inst2.IN1
+D => inst4.IN1
+B => inst7.IN0
+B => inst3.IN1
+
+
+|Block1|Display7Segmentos:inst1|FuncaoD:inst6
+Fd <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst11.IN0
+B => inst3.IN0
+B => inst9.IN0
+B => inst10.IN0
+D => inst4.IN0
+D => inst9.IN2
+D => inst8.IN2
+C => inst2.IN0
+C => inst8.IN1
+C => inst10.IN1
+
+
+|Block1|Display7Segmentos:inst1|FuncaoE:inst7
+Fe <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst1.IN0
+C => inst5.IN0
+C => inst2.IN1
+D => inst3.IN0
+
+
+|Block1|Display7Segmentos:inst1|FuncaoG:inst9
+Fg <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst4.IN0
+A => inst.IN0
+B => inst2.IN0
+B => inst9.IN1
+C => inst6.IN1
+C => inst3.IN0
+C => inst8.IN0
+D => inst4.IN1
+D => inst5.IN0
+
+
+|Block1|Display7Segmentos:inst1|FuncaoF:inst8
+Fe <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+C => inst3.IN0
+C => inst9.IN1
+D => inst5.IN0
+A => inst9.IN0
+A => inst8.IN0
+A => inst.IN0
+B => inst1.IN0
+B => inst2.IN1
+B => inst10.IN0
+
+
+|Block1|contador:inst2
+clk => umSeg.CLK
+clk => clock[0].CLK
+clk => clock[1].CLK
+clk => clock[2].CLK
+clk => clock[3].CLK
+clk => clock[4].CLK
+clk => clock[5].CLK
+clk => clock[6].CLK
+clk => clock[7].CLK
+clk => clock[8].CLK
+clk => clock[9].CLK
+clk => clock[10].CLK
+clk => clock[11].CLK
+clk => clock[12].CLK
+clk => clock[13].CLK
+clk => clock[14].CLK
+clk => clock[15].CLK
+clk => clock[16].CLK
+clk => clock[17].CLK
+clk => clock[18].CLK
+clk => clock[19].CLK
+clk => clock[20].CLK
+clk => clock[21].CLK
+clk => clock[22].CLK
+clk => clock[23].CLK
+clk => clock[24].CLK
+valor[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
+valor[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
+valor[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
+valor[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

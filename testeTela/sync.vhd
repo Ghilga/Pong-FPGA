@@ -22,7 +22,7 @@ BEGIN
 	IF(rising_edge(clk)) THEN
 	
 		IF(h=480 OR h=152 OR h=791 OR v=36 OR v=515 OR (((h>156 AND h<166) OR (h>777 AND h<787)) AND v>250 AND v<302)) THEN 	--offsets: H=160, V=45
-			r<=(OTHERS => '1');
+			r<=(OTHERS => '0');
 			g<=(OTHERS => '0');
 			b<=(OTHERS => '1');
 		ELSE

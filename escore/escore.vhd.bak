@@ -1,0 +1,21 @@
+LIBRARY IEEE;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+ENTITY contador IS
+PORT(
+	clk: in std_logic;
+	botao: in std_logic;
+	valor: out std_logic_vector (3 DOWNTO 0);
+);
+ARCHITECTURE comportamento OF contador IS
+	signal counter: unsigned(3 DOWNTO 0):= (OTHERS => '0');
+BEGIN
+PROCESS(clk,botao)
+	BEGIN
+		if(rising_edge(clk) AND botao = '1') then
+			counter <= counter+1;
+		end if;
+	END PROCESS;
+END comportamento;
+		
