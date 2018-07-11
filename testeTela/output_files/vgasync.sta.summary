@@ -3,19 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk_pixel:inst1|inst'
-Slack : -2.117
-TNS   : -40.001
+Slack : -4.179
+TNS   : -138.856
+
+Type  : Slow 1200mV 85C Model Setup 'tela:inst|sync:C1|clockLento'
+Slack : -1.379
+TNS   : -21.963
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
 Slack : 0.102
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Hold 'clk_pixel:inst1|inst'
+Slack : -0.217
+TNS   : -0.217
+
 Type  : Slow 1200mV 85C Model Hold 'clk'
 Slack : -0.125
 TNS   : -0.125
 
-Type  : Slow 1200mV 85C Model Hold 'clk_pixel:inst1|inst'
-Slack : 0.581
+Type  : Slow 1200mV 85C Model Hold 'tela:inst|sync:C1|clockLento'
+Slack : 0.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -24,22 +32,34 @@ TNS   : -4.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_pixel:inst1|inst'
 Slack : -1.000
-TNS   : -26.000
+TNS   : -58.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'tela:inst|sync:C1|clockLento'
+Slack : -1.000
+TNS   : -22.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk_pixel:inst1|inst'
-Slack : -1.807
-TNS   : -33.662
+Slack : -3.642
+TNS   : -119.463
+
+Type  : Slow 1200mV 0C Model Setup 'tela:inst|sync:C1|clockLento'
+Slack : -1.118
+TNS   : -17.202
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
 Slack : 0.201
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'clk_pixel:inst1|inst'
+Slack : -0.189
+TNS   : -0.189
+
 Type  : Slow 1200mV 0C Model Hold 'clk'
 Slack : -0.183
 TNS   : -0.183
 
-Type  : Slow 1200mV 0C Model Hold 'clk_pixel:inst1|inst'
-Slack : 0.521
+Type  : Slow 1200mV 0C Model Hold 'tela:inst|sync:C1|clockLento'
+Slack : 0.313
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -48,22 +68,34 @@ TNS   : -4.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_pixel:inst1|inst'
 Slack : -1.000
-TNS   : -26.000
+TNS   : -58.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'tela:inst|sync:C1|clockLento'
+Slack : -1.000
+TNS   : -22.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk_pixel:inst1|inst'
-Slack : -0.714
-TNS   : -10.618
+Slack : -1.872
+TNS   : -52.005
+
+Type  : Fast 1200mV 0C Model Setup 'tela:inst|sync:C1|clockLento'
+Slack : -0.328
+TNS   : -3.281
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
 Slack : 0.291
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'clk_pixel:inst1|inst'
+Slack : -0.251
+TNS   : -0.251
+
 Type  : Fast 1200mV 0C Model Hold 'clk'
 Slack : -0.108
 TNS   : -0.108
 
-Type  : Fast 1200mV 0C Model Hold 'clk_pixel:inst1|inst'
-Slack : 0.311
+Type  : Fast 1200mV 0C Model Hold 'tela:inst|sync:C1|clockLento'
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -72,6 +104,10 @@ TNS   : -4.044
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_pixel:inst1|inst'
 Slack : -1.000
-TNS   : -26.000
+TNS   : -58.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'tela:inst|sync:C1|clockLento'
+Slack : -1.000
+TNS   : -22.000
 
 ------------------------------------------------------------

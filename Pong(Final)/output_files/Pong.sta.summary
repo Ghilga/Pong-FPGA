@@ -1,0 +1,257 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_pixel:inst4|inst'
+Slack : -4.572
+TNS   : -263.861
+
+Type  : Slow 1200mV 85C Model Setup 'tela:inst|sync:C1|slowclk'
+Slack : -4.531
+TNS   : -65.642
+
+Type  : Slow 1200mV 85C Model Setup 'ps2_keyboard:inst5|debounce:debounce_ps2_clk|result'
+Slack : -1.153
+TNS   : -1.153
+
+Type  : Slow 1200mV 85C Model Setup 'tela:inst|sync:C1|p2ponto'
+Slack : -0.840
+TNS   : -5.423
+
+Type  : Slow 1200mV 85C Model Setup 'tela:inst|sync:C1|p1ponto'
+Slack : -0.757
+TNS   : -5.495
+
+Type  : Slow 1200mV 85C Model Setup 'ps2_keyboard:inst5|ps2_code_new'
+Slack : -0.156
+TNS   : -0.504
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : 0.046
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'tela:inst|sync:C1|slowclk'
+Slack : -0.323
+TNS   : -0.458
+
+Type  : Slow 1200mV 85C Model Hold 'clk_pixel:inst4|inst'
+Slack : -0.236
+TNS   : -0.236
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.020
+TNS   : -0.020
+
+Type  : Slow 1200mV 85C Model Hold 'ps2_keyboard:inst5|ps2_code_new'
+Slack : 0.123
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'tela:inst|sync:C1|p2ponto'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'tela:inst|sync:C1|p1ponto'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ps2_keyboard:inst5|debounce:debounce_ps2_clk|result'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_pixel:inst4|inst'
+Slack : -1.000
+TNS   : -127.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'tela:inst|sync:C1|slowclk'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2_keyboard:inst5|debounce:debounce_ps2_clk|result'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'tela:inst|sync:C1|p1ponto'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'tela:inst|sync:C1|p2ponto'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2_keyboard:inst5|ps2_code_new'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_pixel:inst4|inst'
+Slack : -3.992
+TNS   : -225.480
+
+Type  : Slow 1200mV 0C Model Setup 'tela:inst|sync:C1|slowclk'
+Slack : -3.930
+TNS   : -57.085
+
+Type  : Slow 1200mV 0C Model Setup 'ps2_keyboard:inst5|debounce:debounce_ps2_clk|result'
+Slack : -0.975
+TNS   : -0.975
+
+Type  : Slow 1200mV 0C Model Setup 'tela:inst|sync:C1|p2ponto'
+Slack : -0.636
+TNS   : -3.946
+
+Type  : Slow 1200mV 0C Model Setup 'tela:inst|sync:C1|p1ponto'
+Slack : -0.593
+TNS   : -4.100
+
+Type  : Slow 1200mV 0C Model Setup 'ps2_keyboard:inst5|ps2_code_new'
+Slack : -0.028
+TNS   : -0.082
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'tela:inst|sync:C1|slowclk'
+Slack : -0.251
+TNS   : -0.341
+
+Type  : Slow 1200mV 0C Model Hold 'clk_pixel:inst4|inst'
+Slack : -0.195
+TNS   : -0.195
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.079
+TNS   : -0.079
+
+Type  : Slow 1200mV 0C Model Hold 'ps2_keyboard:inst5|ps2_code_new'
+Slack : 0.104
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'tela:inst|sync:C1|p1ponto'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'tela:inst|sync:C1|p2ponto'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ps2_keyboard:inst5|debounce:debounce_ps2_clk|result'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_pixel:inst4|inst'
+Slack : -1.000
+TNS   : -127.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'tela:inst|sync:C1|slowclk'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard:inst5|debounce:debounce_ps2_clk|result'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'tela:inst|sync:C1|p1ponto'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'tela:inst|sync:C1|p2ponto'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard:inst5|ps2_code_new'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_pixel:inst4|inst'
+Slack : -2.210
+TNS   : -101.260
+
+Type  : Fast 1200mV 0C Model Setup 'tela:inst|sync:C1|slowclk'
+Slack : -2.118
+TNS   : -25.873
+
+Type  : Fast 1200mV 0C Model Setup 'ps2_keyboard:inst5|debounce:debounce_ps2_clk|result'
+Slack : -0.410
+TNS   : -0.410
+
+Type  : Fast 1200mV 0C Model Setup 'tela:inst|sync:C1|p2ponto'
+Slack : -0.043
+TNS   : -0.043
+
+Type  : Fast 1200mV 0C Model Setup 'tela:inst|sync:C1|p1ponto'
+Slack : 0.032
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ps2_keyboard:inst5|ps2_code_new'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'tela:inst|sync:C1|slowclk'
+Slack : -0.277
+TNS   : -0.445
+
+Type  : Fast 1200mV 0C Model Hold 'clk_pixel:inst4|inst'
+Slack : -0.253
+TNS   : -0.253
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.075
+TNS   : -0.075
+
+Type  : Fast 1200mV 0C Model Hold 'ps2_keyboard:inst5|ps2_code_new'
+Slack : 0.017
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'tela:inst|sync:C1|p1ponto'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'tela:inst|sync:C1|p2ponto'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ps2_keyboard:inst5|debounce:debounce_ps2_clk|result'
+Slack : 0.196
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_pixel:inst4|inst'
+Slack : -1.000
+TNS   : -127.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'tela:inst|sync:C1|slowclk'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard:inst5|debounce:debounce_ps2_clk|result'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'tela:inst|sync:C1|p1ponto'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'tela:inst|sync:C1|p2ponto'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard:inst5|ps2_code_new'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

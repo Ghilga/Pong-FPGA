@@ -1,0 +1,5 @@
+|clk_pixel
+div_two <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+
+

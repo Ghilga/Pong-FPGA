@@ -1,0 +1,1642 @@
+TimeQuest Timing Analyzer report for testeverilog
+Mon Jul 09 19:52:02 2018
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'clk'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Slow 1200mV 85C Model Metastability Report
+ 20. Slow 1200mV 0C Model Fmax Summary
+ 21. Slow 1200mV 0C Model Setup Summary
+ 22. Slow 1200mV 0C Model Hold Summary
+ 23. Slow 1200mV 0C Model Recovery Summary
+ 24. Slow 1200mV 0C Model Removal Summary
+ 25. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 26. Slow 1200mV 0C Model Setup: 'clk'
+ 27. Slow 1200mV 0C Model Hold: 'clk'
+ 28. Slow 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 29. Setup Times
+ 30. Hold Times
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Slow 1200mV 0C Model Metastability Report
+ 34. Fast 1200mV 0C Model Setup Summary
+ 35. Fast 1200mV 0C Model Hold Summary
+ 36. Fast 1200mV 0C Model Recovery Summary
+ 37. Fast 1200mV 0C Model Removal Summary
+ 38. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 39. Fast 1200mV 0C Model Setup: 'clk'
+ 40. Fast 1200mV 0C Model Hold: 'clk'
+ 41. Fast 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 42. Setup Times
+ 43. Hold Times
+ 44. Clock to Output Times
+ 45. Minimum Clock to Output Times
+ 46. Fast 1200mV 0C Model Metastability Report
+ 47. Multicorner Timing Analysis Summary
+ 48. Setup Times
+ 49. Hold Times
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Board Trace Model Assignments
+ 53. Input Transition Times
+ 54. Slow Corner Signal Integrity Metrics
+ 55. Fast Corner Signal Integrity Metrics
+ 56. Setup Transfers
+ 57. Hold Transfers
+ 58. Report TCCS
+ 59. Report RSKM
+ 60. Unconstrained Paths
+ 61. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name      ; testeverilog                                       ;
+; Device Family      ; Cyclone III                                        ;
+; Device Name        ; EP3C16F484C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 229.99 MHz ; 229.99 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -3.348 ; -130.000           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.345 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -71.000                          ;
++-------+--------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                         ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.348 ; PaddlePosition[4]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.632      ;
+; -3.267 ; PaddlePosition[3]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.551      ;
+; -3.261 ; PaddlePosition[5]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.545      ;
+; -3.226 ; PaddlePosition[6]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.510      ;
+; -3.117 ; PaddlePosition[7]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.401      ;
+; -3.049 ; ballY[5]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.061     ; 3.983      ;
+; -3.048 ; PaddlePosition[4]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.332      ;
+; -3.046 ; PaddlePosition[4]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.330      ;
+; -3.036 ; PaddlePosition[4]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.320      ;
+; -3.034 ; PaddlePosition[4]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.318      ;
+; -3.033 ; PaddlePosition[4]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.317      ;
+; -3.031 ; PaddlePosition[4]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.315      ;
+; -2.967 ; PaddlePosition[3]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.251      ;
+; -2.965 ; PaddlePosition[3]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.249      ;
+; -2.959 ; ballY[6]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.061     ; 3.893      ;
+; -2.959 ; PaddlePosition[5]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.243      ;
+; -2.958 ; PaddlePosition[3]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.242      ;
+; -2.957 ; PaddlePosition[5]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.241      ;
+; -2.956 ; PaddlePosition[5]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.240      ;
+; -2.956 ; PaddlePosition[3]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.240      ;
+; -2.955 ; PaddlePosition[5]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.239      ;
+; -2.955 ; PaddlePosition[3]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.239      ;
+; -2.954 ; PaddlePosition[5]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.238      ;
+; -2.954 ; PaddlePosition[5]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.238      ;
+; -2.953 ; hvsync_generator:syncgen|CounterX[9] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.290      ; 4.238      ;
+; -2.953 ; PaddlePosition[3]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.237      ;
+; -2.926 ; PaddlePosition[6]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.210      ;
+; -2.924 ; PaddlePosition[6]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.208      ;
+; -2.914 ; PaddlePosition[6]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.198      ;
+; -2.912 ; PaddlePosition[6]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.196      ;
+; -2.911 ; PaddlePosition[6]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.195      ;
+; -2.909 ; PaddlePosition[6]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.193      ;
+; -2.870 ; ballY[4]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.061     ; 3.804      ;
+; -2.867 ; hvsync_generator:syncgen|CounterX[4] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.290      ; 4.152      ;
+; -2.857 ; hvsync_generator:syncgen|CounterX[0] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.061     ; 3.791      ;
+; -2.830 ; ballY[5]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.291      ; 4.116      ;
+; -2.815 ; PaddlePosition[7]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.099      ;
+; -2.813 ; PaddlePosition[7]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.097      ;
+; -2.812 ; PaddlePosition[7]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.096      ;
+; -2.811 ; PaddlePosition[7]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.095      ;
+; -2.810 ; PaddlePosition[7]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.094      ;
+; -2.810 ; PaddlePosition[7]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.289      ; 4.094      ;
+; -2.800 ; ballY[8]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.061     ; 3.734      ;
+; -2.774 ; hvsync_generator:syncgen|CounterX[6] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.060     ; 3.709      ;
+; -2.773 ; hvsync_generator:syncgen|CounterX[3] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.060     ; 3.708      ;
+; -2.742 ; ballY[7]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.061     ; 3.676      ;
+; -2.740 ; ballY[6]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.291      ; 4.026      ;
+; -2.726 ; hvsync_generator:syncgen|CounterX[6] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.290      ; 4.011      ;
+; -2.723 ; hvsync_generator:syncgen|CounterX[0] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 4.007      ;
+; -2.700 ; ballX[4]                             ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.291      ; 3.986      ;
+; -2.698 ; ballX[4]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.291      ; 3.984      ;
+; -2.694 ; hvsync_generator:syncgen|CounterY[8] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.287      ; 3.976      ;
+; -2.688 ; hvsync_generator:syncgen|CounterX[3] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.290      ; 3.973      ;
+; -2.671 ; PaddlePosition[4]                    ; PaddlePosition[8]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.605      ;
+; -2.671 ; PaddlePosition[4]                    ; PaddlePosition[6]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.605      ;
+; -2.671 ; PaddlePosition[4]                    ; PaddlePosition[1]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.605      ;
+; -2.671 ; PaddlePosition[4]                    ; PaddlePosition[2]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.605      ;
+; -2.671 ; PaddlePosition[4]                    ; PaddlePosition[3]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.605      ;
+; -2.671 ; PaddlePosition[4]                    ; PaddlePosition[4]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.605      ;
+; -2.671 ; PaddlePosition[4]                    ; PaddlePosition[5]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.605      ;
+; -2.671 ; PaddlePosition[4]                    ; PaddlePosition[7]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.605      ;
+; -2.662 ; PaddlePosition[0]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 3.946      ;
+; -2.660 ; PaddlePosition[3]                    ; PaddlePosition[8]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.594      ;
+; -2.660 ; PaddlePosition[3]                    ; PaddlePosition[6]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.594      ;
+; -2.660 ; PaddlePosition[3]                    ; PaddlePosition[1]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.594      ;
+; -2.660 ; PaddlePosition[3]                    ; PaddlePosition[2]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.594      ;
+; -2.660 ; PaddlePosition[3]                    ; PaddlePosition[3]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.594      ;
+; -2.660 ; PaddlePosition[3]                    ; PaddlePosition[4]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.594      ;
+; -2.660 ; PaddlePosition[3]                    ; PaddlePosition[5]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.594      ;
+; -2.660 ; PaddlePosition[3]                    ; PaddlePosition[7]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.594      ;
+; -2.651 ; ballY[4]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.291      ; 3.937      ;
+; -2.647 ; hvsync_generator:syncgen|CounterX[9] ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.290      ; 3.932      ;
+; -2.646 ; hvsync_generator:syncgen|CounterX[9] ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.290      ; 3.931      ;
+; -2.641 ; hvsync_generator:syncgen|CounterX[9] ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.290      ; 3.926      ;
+; -2.639 ; hvsync_generator:syncgen|CounterX[9] ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.290      ; 3.924      ;
+; -2.635 ; ballX[6]                             ; ball_inX                             ; clk          ; clk         ; 1.000        ; -0.061     ; 3.569      ;
+; -2.620 ; PaddlePosition[8]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.289      ; 3.904      ;
+; -2.619 ; hvsync_generator:syncgen|CounterX[5] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.290      ; 3.904      ;
+; -2.617 ; hvsync_generator:syncgen|CounterX[4] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.060     ; 3.552      ;
+; -2.610 ; hvsync_generator:syncgen|CounterX[9] ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.290      ; 3.895      ;
+; -2.608 ; hvsync_generator:syncgen|CounterX[9] ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.290      ; 3.893      ;
+; -2.602 ; PaddlePosition[0]                    ; PaddlePosition[8]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.536      ;
+; -2.602 ; PaddlePosition[0]                    ; PaddlePosition[6]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.536      ;
+; -2.602 ; PaddlePosition[0]                    ; PaddlePosition[1]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.536      ;
+; -2.602 ; PaddlePosition[0]                    ; PaddlePosition[2]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.536      ;
+; -2.602 ; PaddlePosition[0]                    ; PaddlePosition[3]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.536      ;
+; -2.602 ; PaddlePosition[0]                    ; PaddlePosition[4]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.536      ;
+; -2.602 ; PaddlePosition[0]                    ; PaddlePosition[5]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.536      ;
+; -2.602 ; PaddlePosition[0]                    ; PaddlePosition[7]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.536      ;
+; -2.594 ; hvsync_generator:syncgen|CounterX[2] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.290      ; 3.879      ;
+; -2.591 ; PaddlePosition[4]                    ; PaddlePosition[0]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.525      ;
+; -2.581 ; ballY[8]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.291      ; 3.867      ;
+; -2.580 ; PaddlePosition[3]                    ; PaddlePosition[0]                    ; clk          ; clk         ; 1.000        ; -0.061     ; 3.514      ;
+; -2.579 ; ballX[6]                             ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.291      ; 3.865      ;
+; -2.569 ; ballX[5]                             ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.291      ; 3.855      ;
+; -2.568 ; ballX[5]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.291      ; 3.854      ;
+; -2.563 ; ballX[5]                             ; ball_inX                             ; clk          ; clk         ; 1.000        ; -0.061     ; 3.497      ;
+; -2.561 ; hvsync_generator:syncgen|CounterX[4] ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.290      ; 3.846      ;
+; -2.560 ; ballY[4]                             ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.291      ; 3.846      ;
+; -2.560 ; ballY[1]                             ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.291      ; 3.846      ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                             ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.345 ; CollisionX1                            ; CollisionX1                            ; clk          ; clk         ; 0.000        ; 0.075      ; 0.577      ;
+; 0.345 ; CollisionX2                            ; CollisionX2                            ; clk          ; clk         ; 0.000        ; 0.075      ; 0.577      ;
+; 0.345 ; CollisionY1                            ; CollisionY1                            ; clk          ; clk         ; 0.000        ; 0.075      ; 0.577      ;
+; 0.345 ; CollisionY2                            ; CollisionY2                            ; clk          ; clk         ; 0.000        ; 0.075      ; 0.577      ;
+; 0.359 ; ball_inX                               ; ball_inX                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.577      ;
+; 0.359 ; ball_inY                               ; ball_inY                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.577      ;
+; 0.359 ; ball_dirX                              ; ball_dirX                              ; clk          ; clk         ; 0.000        ; 0.061      ; 0.577      ;
+; 0.359 ; ball_dirY                              ; ball_dirY                              ; clk          ; clk         ; 0.000        ; 0.061      ; 0.577      ;
+; 0.359 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[0]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.577      ;
+; 0.362 ; hvsync_generator:syncgen|inDisplayArea ; hvsync_generator:syncgen|inDisplayArea ; clk          ; clk         ; 0.000        ; 0.061      ; 0.580      ;
+; 0.362 ; ballX[0]                               ; ballX[0]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.580      ;
+; 0.362 ; ballY[0]                               ; ballY[0]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.580      ;
+; 0.414 ; hvsync_generator:syncgen|CounterY[8]   ; hvsync_generator:syncgen|CounterY[8]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.632      ;
+; 0.510 ; quadAr[0]                              ; quadAr[1]                              ; clk          ; clk         ; 0.000        ; 0.062      ; 0.729      ;
+; 0.524 ; quadAr[1]                              ; quadAr[2]                              ; clk          ; clk         ; 0.000        ; 0.061      ; 0.742      ;
+; 0.524 ; quadBr[0]                              ; quadBr[1]                              ; clk          ; clk         ; 0.000        ; 0.062      ; 0.743      ;
+; 0.571 ; hvsync_generator:syncgen|CounterX[2]   ; hvsync_generator:syncgen|CounterX[2]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.789      ;
+; 0.572 ; hvsync_generator:syncgen|CounterX[1]   ; hvsync_generator:syncgen|CounterX[1]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.790      ;
+; 0.573 ; ballX[2]                               ; ballX[2]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.791      ;
+; 0.573 ; ballY[1]                               ; ballY[1]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.791      ;
+; 0.573 ; hvsync_generator:syncgen|CounterX[7]   ; hvsync_generator:syncgen|CounterX[7]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.791      ;
+; 0.575 ; ballX[3]                               ; ballX[3]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.793      ;
+; 0.575 ; ballX[1]                               ; ballX[1]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.793      ;
+; 0.577 ; hvsync_generator:syncgen|CounterY[2]   ; hvsync_generator:syncgen|CounterY[2]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.795      ;
+; 0.577 ; hvsync_generator:syncgen|CounterX[7]   ; hvsync_generator:syncgen|vga_HS        ; clk          ; clk         ; 0.000        ; 0.062      ; 0.796      ;
+; 0.578 ; hvsync_generator:syncgen|CounterY[1]   ; hvsync_generator:syncgen|CounterY[1]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.796      ;
+; 0.578 ; hvsync_generator:syncgen|CounterX[3]   ; hvsync_generator:syncgen|CounterX[3]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.796      ;
+; 0.580 ; ballX[6]                               ; ballX[6]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.798      ;
+; 0.580 ; ballX[9]                               ; ballX[9]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.798      ;
+; 0.580 ; ballX[8]                               ; ballX[8]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.798      ;
+; 0.580 ; ballY[4]                               ; ballY[4]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.798      ;
+; 0.580 ; hvsync_generator:syncgen|CounterY[5]   ; hvsync_generator:syncgen|CounterY[5]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.798      ;
+; 0.581 ; ballX[4]                               ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.799      ;
+; 0.581 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[1]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.799      ;
+; 0.583 ; ball_dirX                              ; ballX[9]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.801      ;
+; 0.583 ; ballY[8]                               ; ballY[8]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.801      ;
+; 0.584 ; ballY[7]                               ; ballY[7]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.802      ;
+; 0.585 ; PaddlePosition[8]                      ; PaddlePosition[8]                      ; clk          ; clk         ; 0.000        ; 0.061      ; 0.803      ;
+; 0.587 ; hvsync_generator:syncgen|CounterY[4]   ; hvsync_generator:syncgen|CounterY[4]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.805      ;
+; 0.590 ; PaddlePosition[1]                      ; PaddlePosition[1]                      ; clk          ; clk         ; 0.000        ; 0.061      ; 0.808      ;
+; 0.590 ; hvsync_generator:syncgen|CounterY[3]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.808      ;
+; 0.591 ; ballY[2]                               ; ballY[2]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.809      ;
+; 0.591 ; hvsync_generator:syncgen|CounterX[6]   ; hvsync_generator:syncgen|CounterX[6]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.809      ;
+; 0.591 ; hvsync_generator:syncgen|CounterX[4]   ; hvsync_generator:syncgen|CounterX[4]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.809      ;
+; 0.593 ; PaddlePosition[2]                      ; PaddlePosition[2]                      ; clk          ; clk         ; 0.000        ; 0.061      ; 0.811      ;
+; 0.602 ; hvsync_generator:syncgen|CounterX[3]   ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.426      ; 1.185      ;
+; 0.607 ; hvsync_generator:syncgen|CounterY[7]   ; hvsync_generator:syncgen|CounterY[7]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.825      ;
+; 0.609 ; hvsync_generator:syncgen|CounterY[6]   ; hvsync_generator:syncgen|CounterY[6]   ; clk          ; clk         ; 0.000        ; 0.061      ; 0.827      ;
+; 0.678 ; quadBr[1]                              ; quadBr[2]                              ; clk          ; clk         ; 0.000        ; 0.061      ; 0.896      ;
+; 0.687 ; hvsync_generator:syncgen|CounterX[8]   ; hvsync_generator:syncgen|vga_HS        ; clk          ; clk         ; 0.000        ; 0.062      ; 0.906      ;
+; 0.710 ; ball_inY                               ; ball_inX                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.928      ;
+; 0.715 ; ballX[7]                               ; ballX[7]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.933      ;
+; 0.720 ; ballY[3]                               ; ballY[3]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.938      ;
+; 0.727 ; ballX[5]                               ; ballX[5]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.945      ;
+; 0.728 ; ballY[6]                               ; ballY[6]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.946      ;
+; 0.731 ; PaddlePosition[6]                      ; PaddlePosition[6]                      ; clk          ; clk         ; 0.000        ; 0.061      ; 0.949      ;
+; 0.731 ; PaddlePosition[4]                      ; PaddlePosition[4]                      ; clk          ; clk         ; 0.000        ; 0.061      ; 0.949      ;
+; 0.734 ; hvsync_generator:syncgen|inDisplayArea ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.423      ; 1.314      ;
+; 0.735 ; PaddlePosition[7]                      ; PaddlePosition[7]                      ; clk          ; clk         ; 0.000        ; 0.061      ; 0.953      ;
+; 0.738 ; hvsync_generator:syncgen|inDisplayArea ; vga_B~reg0                             ; clk          ; clk         ; 0.000        ; 0.423      ; 1.318      ;
+; 0.738 ; PaddlePosition[5]                      ; PaddlePosition[5]                      ; clk          ; clk         ; 0.000        ; 0.061      ; 0.956      ;
+; 0.745 ; PaddlePosition[3]                      ; PaddlePosition[3]                      ; clk          ; clk         ; 0.000        ; 0.061      ; 0.963      ;
+; 0.756 ; ball_dirX                              ; ballX[1]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.974      ;
+; 0.758 ; ball_dirX                              ; ballX[2]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.976      ;
+; 0.760 ; ball_dirX                              ; ballX[3]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.978      ;
+; 0.760 ; ball_dirX                              ; ballX[6]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.978      ;
+; 0.760 ; ball_dirX                              ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.978      ;
+; 0.760 ; ball_dirX                              ; ballX[5]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.978      ;
+; 0.764 ; ball_dirX                              ; ballX[8]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.982      ;
+; 0.764 ; ball_dirX                              ; ballX[7]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 0.982      ;
+; 0.801 ; ResetCollision                         ; CollisionY1                            ; clk          ; clk         ; 0.000        ; 0.423      ; 1.381      ;
+; 0.801 ; ResetCollision                         ; CollisionY2                            ; clk          ; clk         ; 0.000        ; 0.423      ; 1.381      ;
+; 0.829 ; hvsync_generator:syncgen|CounterX[5]   ; hvsync_generator:syncgen|vga_HS        ; clk          ; clk         ; 0.000        ; 0.062      ; 1.048      ;
+; 0.833 ; hvsync_generator:syncgen|CounterY[3]   ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.423      ; 1.413      ;
+; 0.833 ; ball_inY                               ; vga_B~reg0                             ; clk          ; clk         ; 0.000        ; 0.427      ; 1.417      ;
+; 0.835 ; hvsync_generator:syncgen|CounterX[9]   ; ResetCollision                         ; clk          ; clk         ; 0.000        ; 0.064      ; 1.056      ;
+; 0.835 ; ball_inY                               ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.427      ; 1.419      ;
+; 0.845 ; ballY[1]                               ; ballY[2]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 1.063      ;
+; 0.846 ; hvsync_generator:syncgen|CounterX[1]   ; hvsync_generator:syncgen|CounterX[2]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.064      ;
+; 0.847 ; ballX[1]                               ; ballX[2]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 1.065      ;
+; 0.847 ; ballX[3]                               ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 1.065      ;
+; 0.852 ; hvsync_generator:syncgen|CounterY[2]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.070      ;
+; 0.853 ; hvsync_generator:syncgen|CounterX[3]   ; hvsync_generator:syncgen|CounterX[4]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.071      ;
+; 0.855 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[2]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.073      ;
+; 0.856 ; ballY[7]                               ; ballY[8]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 1.074      ;
+; 0.856 ; hvsync_generator:syncgen|CounterY[1]   ; hvsync_generator:syncgen|CounterY[2]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.074      ;
+; 0.857 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.075      ;
+; 0.858 ; hvsync_generator:syncgen|CounterY[1]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.076      ;
+; 0.859 ; hvsync_generator:syncgen|CounterX[2]   ; hvsync_generator:syncgen|CounterX[3]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.077      ;
+; 0.861 ; hvsync_generator:syncgen|CounterX[2]   ; hvsync_generator:syncgen|CounterX[4]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.079      ;
+; 0.862 ; hvsync_generator:syncgen|CounterY[4]   ; hvsync_generator:syncgen|CounterY[5]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.080      ;
+; 0.862 ; ballX[2]                               ; ballX[3]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 1.080      ;
+; 0.864 ; PaddlePosition[1]                      ; PaddlePosition[2]                      ; clk          ; clk         ; 0.000        ; 0.061      ; 1.082      ;
+; 0.864 ; ballX[2]                               ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 1.082      ;
+; 0.867 ; hvsync_generator:syncgen|CounterX[5]   ; hvsync_generator:syncgen|CounterX[6]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.085      ;
+; 0.868 ; hvsync_generator:syncgen|CounterY[5]   ; hvsync_generator:syncgen|CounterY[6]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.086      ;
+; 0.869 ; ballY[4]                               ; ballY[5]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 1.087      ;
+; 0.869 ; ballX[8]                               ; ballX[9]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 1.087      ;
+; 0.869 ; ballX[6]                               ; ballX[7]                               ; clk          ; clk         ; 0.000        ; 0.061      ; 1.087      ;
+; 0.870 ; hvsync_generator:syncgen|CounterY[5]   ; hvsync_generator:syncgen|CounterY[7]   ; clk          ; clk         ; 0.000        ; 0.061      ; 1.088      ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'clk'                                                                       ;
++--------+--------------+----------------+-----------------+-------+------------+----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock ; Clock Edge ; Target                                 ;
++--------+--------------+----------------+-----------------+-------+------------+----------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; clk   ; Rise       ; clk                                    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionX1                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionX2                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionY1                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionY2                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[0]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[1]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[2]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[3]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[4]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[5]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[6]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[7]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[8]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ResetCollision                         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[0]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[1]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[2]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[3]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[4]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[5]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[6]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[7]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[8]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[9]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[0]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[1]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[2]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[3]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[4]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[5]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[6]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[7]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[8]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_dirX                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_dirY                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_inX                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_inY                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[4]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[5]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[6]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[7]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[8]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[9]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[4]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[5]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[6]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[7]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[8]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|inDisplayArea ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|vga_HS        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|vga_VS        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadAr[0]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadAr[1]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadAr[2]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadBr[0]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadBr[1]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadBr[2]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; vga_B~reg0                             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; vga_G~reg0                             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; vga_R~reg0                             ;
+; 0.167  ; 0.351        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionX1                            ;
+; 0.167  ; 0.351        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionX2                            ;
+; 0.167  ; 0.351        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionY1                            ;
+; 0.167  ; 0.351        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionY2                            ;
+; 0.167  ; 0.351        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; vga_B~reg0                             ;
+; 0.167  ; 0.351        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; vga_G~reg0                             ;
+; 0.167  ; 0.351        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; vga_R~reg0                             ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballY[0]                               ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ball_dirY                              ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[1]   ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[2]   ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[3]   ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[4]   ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[5]   ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[6]   ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[7]   ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[8]   ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[9]   ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[0]                      ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[1]                      ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[2]                      ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[3]                      ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[4]                      ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[5]                      ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[6]                      ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[7]                      ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[8]                      ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ResetCollision                         ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[0]                               ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[1]                               ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[2]                               ;
++--------+--------------+----------------+-----------------+-------+------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; quadA     ; clk        ; 1.970 ; 2.422 ; Rise       ; clk             ;
+; quadB     ; clk        ; 1.975 ; 2.449 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; quadA     ; clk        ; -1.585 ; -2.014 ; Rise       ; clk             ;
+; quadB     ; clk        ; -1.590 ; -2.040 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; vga_B      ; clk        ; 5.703 ; 5.723 ; Rise       ; clk             ;
+; vga_G      ; clk        ; 6.255 ; 6.291 ; Rise       ; clk             ;
+; vga_R      ; clk        ; 6.242 ; 6.292 ; Rise       ; clk             ;
+; vga_h_sync ; clk        ; 5.701 ; 5.679 ; Rise       ; clk             ;
+; vga_v_sync ; clk        ; 5.219 ; 5.196 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; vga_B      ; clk        ; 5.586 ; 5.605 ; Rise       ; clk             ;
+; vga_G      ; clk        ; 6.115 ; 6.150 ; Rise       ; clk             ;
+; vga_R      ; clk        ; 6.102 ; 6.150 ; Rise       ; clk             ;
+; vga_h_sync ; clk        ; 5.582 ; 5.563 ; Rise       ; clk             ;
+; vga_v_sync ; clk        ; 5.120 ; 5.099 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 256.67 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -2.896 ; -110.926          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.299 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -71.000                         ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                          ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.896 ; PaddlePosition[4]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 4.155      ;
+; -2.830 ; PaddlePosition[3]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 4.089      ;
+; -2.808 ; PaddlePosition[5]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 4.067      ;
+; -2.791 ; PaddlePosition[6]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 4.050      ;
+; -2.681 ; PaddlePosition[7]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.940      ;
+; -2.621 ; PaddlePosition[4]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.880      ;
+; -2.619 ; PaddlePosition[4]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.878      ;
+; -2.615 ; ballY[5]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.054     ; 3.556      ;
+; -2.614 ; PaddlePosition[4]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.873      ;
+; -2.614 ; PaddlePosition[4]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.873      ;
+; -2.613 ; PaddlePosition[4]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.872      ;
+; -2.612 ; PaddlePosition[4]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.871      ;
+; -2.555 ; PaddlePosition[3]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.814      ;
+; -2.553 ; PaddlePosition[3]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.812      ;
+; -2.548 ; PaddlePosition[3]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.807      ;
+; -2.548 ; PaddlePosition[3]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.807      ;
+; -2.547 ; PaddlePosition[3]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.806      ;
+; -2.546 ; PaddlePosition[3]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.805      ;
+; -2.536 ; PaddlePosition[5]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.795      ;
+; -2.535 ; PaddlePosition[5]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.794      ;
+; -2.532 ; PaddlePosition[5]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.791      ;
+; -2.530 ; PaddlePosition[5]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.789      ;
+; -2.529 ; PaddlePosition[5]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.788      ;
+; -2.528 ; ballY[6]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.054     ; 3.469      ;
+; -2.527 ; PaddlePosition[5]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.786      ;
+; -2.516 ; PaddlePosition[6]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.775      ;
+; -2.514 ; PaddlePosition[6]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.773      ;
+; -2.513 ; hvsync_generator:syncgen|CounterX[9] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.772      ;
+; -2.509 ; PaddlePosition[6]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.768      ;
+; -2.509 ; PaddlePosition[6]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.768      ;
+; -2.508 ; PaddlePosition[6]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.767      ;
+; -2.507 ; PaddlePosition[6]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.766      ;
+; -2.492 ; hvsync_generator:syncgen|CounterX[0] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.054     ; 3.433      ;
+; -2.451 ; ballY[4]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.054     ; 3.392      ;
+; -2.441 ; hvsync_generator:syncgen|CounterX[4] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.700      ;
+; -2.434 ; ballY[5]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.265      ; 3.694      ;
+; -2.418 ; hvsync_generator:syncgen|CounterX[3] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.054     ; 3.359      ;
+; -2.417 ; hvsync_generator:syncgen|CounterX[6] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.054     ; 3.358      ;
+; -2.409 ; PaddlePosition[7]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.668      ;
+; -2.408 ; PaddlePosition[7]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.667      ;
+; -2.405 ; PaddlePosition[7]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.664      ;
+; -2.403 ; PaddlePosition[7]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.662      ;
+; -2.402 ; PaddlePosition[7]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.661      ;
+; -2.400 ; PaddlePosition[7]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.659      ;
+; -2.390 ; ballY[8]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.054     ; 3.331      ;
+; -2.347 ; ballY[6]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.265      ; 3.607      ;
+; -2.340 ; ballY[7]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.054     ; 3.281      ;
+; -2.327 ; hvsync_generator:syncgen|CounterY[8] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.262      ; 3.584      ;
+; -2.322 ; PaddlePosition[4]                    ; PaddlePosition[8]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.263      ;
+; -2.322 ; PaddlePosition[4]                    ; PaddlePosition[6]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.263      ;
+; -2.322 ; PaddlePosition[4]                    ; PaddlePosition[1]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.263      ;
+; -2.322 ; PaddlePosition[4]                    ; PaddlePosition[2]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.263      ;
+; -2.322 ; PaddlePosition[4]                    ; PaddlePosition[3]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.263      ;
+; -2.322 ; PaddlePosition[4]                    ; PaddlePosition[4]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.263      ;
+; -2.322 ; PaddlePosition[4]                    ; PaddlePosition[5]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.263      ;
+; -2.322 ; PaddlePosition[4]                    ; PaddlePosition[7]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.263      ;
+; -2.316 ; ballX[4]                             ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.265      ; 3.576      ;
+; -2.315 ; ballX[4]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.265      ; 3.575      ;
+; -2.312 ; hvsync_generator:syncgen|CounterX[6] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.571      ;
+; -2.311 ; hvsync_generator:syncgen|CounterX[0] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.570      ;
+; -2.309 ; PaddlePosition[3]                    ; PaddlePosition[8]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.250      ;
+; -2.309 ; PaddlePosition[3]                    ; PaddlePosition[6]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.250      ;
+; -2.309 ; PaddlePosition[3]                    ; PaddlePosition[1]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.250      ;
+; -2.309 ; PaddlePosition[3]                    ; PaddlePosition[2]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.250      ;
+; -2.309 ; PaddlePosition[3]                    ; PaddlePosition[3]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.250      ;
+; -2.309 ; PaddlePosition[3]                    ; PaddlePosition[4]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.250      ;
+; -2.309 ; PaddlePosition[3]                    ; PaddlePosition[5]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.250      ;
+; -2.309 ; PaddlePosition[3]                    ; PaddlePosition[7]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.250      ;
+; -2.285 ; hvsync_generator:syncgen|CounterX[4] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.054     ; 3.226      ;
+; -2.276 ; hvsync_generator:syncgen|CounterX[3] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.535      ;
+; -2.272 ; PaddlePosition[0]                    ; PaddlePosition[8]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.213      ;
+; -2.272 ; PaddlePosition[0]                    ; PaddlePosition[6]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.213      ;
+; -2.272 ; PaddlePosition[0]                    ; PaddlePosition[1]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.213      ;
+; -2.272 ; PaddlePosition[0]                    ; PaddlePosition[2]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.213      ;
+; -2.272 ; PaddlePosition[0]                    ; PaddlePosition[3]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.213      ;
+; -2.272 ; PaddlePosition[0]                    ; PaddlePosition[4]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.213      ;
+; -2.272 ; PaddlePosition[0]                    ; PaddlePosition[5]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.213      ;
+; -2.272 ; PaddlePosition[0]                    ; PaddlePosition[7]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.213      ;
+; -2.270 ; ballY[4]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.265      ; 3.530      ;
+; -2.258 ; PaddlePosition[0]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.517      ;
+; -2.249 ; ballX[6]                             ; ball_inX                             ; clk          ; clk         ; 1.000        ; -0.054     ; 3.190      ;
+; -2.249 ; PaddlePosition[4]                    ; PaddlePosition[0]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.190      ;
+; -2.241 ; hvsync_generator:syncgen|CounterX[9] ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.500      ;
+; -2.240 ; hvsync_generator:syncgen|CounterX[9] ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.499      ;
+; -2.236 ; PaddlePosition[3]                    ; PaddlePosition[0]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.177      ;
+; -2.231 ; PaddlePosition[8]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.490      ;
+; -2.229 ; hvsync_generator:syncgen|CounterX[9] ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.488      ;
+; -2.227 ; hvsync_generator:syncgen|CounterX[9] ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.486      ;
+; -2.221 ; hvsync_generator:syncgen|CounterX[5] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.480      ;
+; -2.210 ; hvsync_generator:syncgen|CounterX[2] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.264      ; 3.469      ;
+; -2.209 ; ballY[8]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.265      ; 3.469      ;
+; -2.207 ; ballX[5]                             ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.265      ; 3.467      ;
+; -2.206 ; ballX[5]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.265      ; 3.466      ;
+; -2.201 ; hvsync_generator:syncgen|CounterX[9] ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.460      ;
+; -2.199 ; hvsync_generator:syncgen|CounterX[9] ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.264      ; 3.458      ;
+; -2.199 ; PaddlePosition[0]                    ; PaddlePosition[0]                    ; clk          ; clk         ; 1.000        ; -0.054     ; 3.140      ;
+; -2.196 ; ballY[1]                             ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.265      ; 3.456      ;
+; -2.194 ; ballY[1]                             ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.265      ; 3.454      ;
+; -2.192 ; ballX[5]                             ; ball_inX                             ; clk          ; clk         ; 1.000        ; -0.054     ; 3.133      ;
+; -2.187 ; hvsync_generator:syncgen|CounterY[3] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.262      ; 3.444      ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                              ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.299 ; CollisionX1                            ; CollisionX1                            ; clk          ; clk         ; 0.000        ; 0.068      ; 0.511      ;
+; 0.299 ; CollisionX2                            ; CollisionX2                            ; clk          ; clk         ; 0.000        ; 0.068      ; 0.511      ;
+; 0.299 ; CollisionY1                            ; CollisionY1                            ; clk          ; clk         ; 0.000        ; 0.068      ; 0.511      ;
+; 0.299 ; CollisionY2                            ; CollisionY2                            ; clk          ; clk         ; 0.000        ; 0.068      ; 0.511      ;
+; 0.312 ; ball_dirY                              ; ball_dirY                              ; clk          ; clk         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.313 ; ball_inX                               ; ball_inX                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.511      ;
+; 0.313 ; ball_inY                               ; ball_inY                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.511      ;
+; 0.313 ; ball_dirX                              ; ball_dirX                              ; clk          ; clk         ; 0.000        ; 0.054      ; 0.511      ;
+; 0.313 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[0]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.511      ;
+; 0.320 ; ballY[0]                               ; ballY[0]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.519      ;
+; 0.321 ; hvsync_generator:syncgen|inDisplayArea ; hvsync_generator:syncgen|inDisplayArea ; clk          ; clk         ; 0.000        ; 0.054      ; 0.519      ;
+; 0.321 ; ballX[0]                               ; ballX[0]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.519      ;
+; 0.367 ; hvsync_generator:syncgen|CounterY[8]   ; hvsync_generator:syncgen|CounterY[8]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.565      ;
+; 0.473 ; quadAr[1]                              ; quadAr[2]                              ; clk          ; clk         ; 0.000        ; 0.054      ; 0.671      ;
+; 0.474 ; quadAr[0]                              ; quadAr[1]                              ; clk          ; clk         ; 0.000        ; 0.055      ; 0.673      ;
+; 0.480 ; quadBr[0]                              ; quadBr[1]                              ; clk          ; clk         ; 0.000        ; 0.055      ; 0.679      ;
+; 0.512 ; hvsync_generator:syncgen|CounterX[2]   ; hvsync_generator:syncgen|CounterX[2]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.711      ;
+; 0.514 ; hvsync_generator:syncgen|CounterX[7]   ; hvsync_generator:syncgen|CounterX[7]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.713      ;
+; 0.514 ; hvsync_generator:syncgen|CounterX[1]   ; hvsync_generator:syncgen|CounterX[1]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.713      ;
+; 0.515 ; ballY[1]                               ; ballY[1]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.714      ;
+; 0.516 ; ballX[2]                               ; ballX[2]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.714      ;
+; 0.518 ; ballX[3]                               ; ballX[3]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.716      ;
+; 0.518 ; ballX[1]                               ; ballX[1]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.716      ;
+; 0.518 ; hvsync_generator:syncgen|CounterY[2]   ; hvsync_generator:syncgen|CounterY[2]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.716      ;
+; 0.518 ; hvsync_generator:syncgen|CounterX[3]   ; hvsync_generator:syncgen|CounterX[3]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.717      ;
+; 0.519 ; hvsync_generator:syncgen|CounterY[1]   ; hvsync_generator:syncgen|CounterY[1]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.717      ;
+; 0.520 ; ballX[6]                               ; ballX[6]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.718      ;
+; 0.520 ; ballX[8]                               ; ballX[8]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.718      ;
+; 0.520 ; ballY[4]                               ; ballY[4]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.719      ;
+; 0.521 ; ballX[9]                               ; ballX[9]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.719      ;
+; 0.521 ; hvsync_generator:syncgen|CounterY[5]   ; hvsync_generator:syncgen|CounterY[5]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.719      ;
+; 0.522 ; ballX[4]                               ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.720      ;
+; 0.522 ; ballY[8]                               ; ballY[8]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.721      ;
+; 0.523 ; ballY[7]                               ; ballY[7]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.722      ;
+; 0.523 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[1]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.721      ;
+; 0.525 ; PaddlePosition[8]                      ; PaddlePosition[8]                      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.723      ;
+; 0.527 ; hvsync_generator:syncgen|CounterY[4]   ; hvsync_generator:syncgen|CounterY[4]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.725      ;
+; 0.527 ; hvsync_generator:syncgen|CounterX[7]   ; hvsync_generator:syncgen|vga_HS        ; clk          ; clk         ; 0.000        ; 0.055      ; 0.726      ;
+; 0.529 ; hvsync_generator:syncgen|CounterY[3]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.727      ;
+; 0.529 ; hvsync_generator:syncgen|CounterX[6]   ; hvsync_generator:syncgen|CounterX[6]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.728      ;
+; 0.529 ; hvsync_generator:syncgen|CounterX[4]   ; hvsync_generator:syncgen|CounterX[4]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.728      ;
+; 0.531 ; ball_dirX                              ; ballX[9]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.729      ;
+; 0.531 ; ballY[2]                               ; ballY[2]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.730      ;
+; 0.531 ; PaddlePosition[1]                      ; PaddlePosition[1]                      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.729      ;
+; 0.534 ; PaddlePosition[2]                      ; PaddlePosition[2]                      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.732      ;
+; 0.543 ; hvsync_generator:syncgen|CounterY[7]   ; hvsync_generator:syncgen|CounterY[7]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.741      ;
+; 0.546 ; hvsync_generator:syncgen|CounterY[6]   ; hvsync_generator:syncgen|CounterY[6]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.744      ;
+; 0.554 ; hvsync_generator:syncgen|CounterX[3]   ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.387      ; 1.085      ;
+; 0.617 ; hvsync_generator:syncgen|CounterX[8]   ; hvsync_generator:syncgen|vga_HS        ; clk          ; clk         ; 0.000        ; 0.055      ; 0.816      ;
+; 0.620 ; quadBr[1]                              ; quadBr[2]                              ; clk          ; clk         ; 0.000        ; 0.054      ; 0.818      ;
+; 0.644 ; ball_inY                               ; ball_inX                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.842      ;
+; 0.656 ; ballX[7]                               ; ballX[7]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.854      ;
+; 0.657 ; ballY[3]                               ; ballY[3]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.856      ;
+; 0.659 ; ballX[5]                               ; ballX[5]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.857      ;
+; 0.663 ; PaddlePosition[4]                      ; PaddlePosition[4]                      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.861      ;
+; 0.668 ; ballY[6]                               ; ballY[6]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.867      ;
+; 0.670 ; PaddlePosition[7]                      ; PaddlePosition[7]                      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.868      ;
+; 0.672 ; PaddlePosition[6]                      ; PaddlePosition[6]                      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.870      ;
+; 0.673 ; PaddlePosition[5]                      ; PaddlePosition[5]                      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.871      ;
+; 0.678 ; PaddlePosition[3]                      ; PaddlePosition[3]                      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.876      ;
+; 0.681 ; hvsync_generator:syncgen|inDisplayArea ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.384      ; 1.209      ;
+; 0.684 ; hvsync_generator:syncgen|inDisplayArea ; vga_B~reg0                             ; clk          ; clk         ; 0.000        ; 0.384      ; 1.212      ;
+; 0.691 ; ball_dirX                              ; ballX[1]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.889      ;
+; 0.693 ; ball_dirX                              ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.891      ;
+; 0.694 ; ball_dirX                              ; ballX[2]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.892      ;
+; 0.694 ; ball_dirX                              ; ballX[6]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.892      ;
+; 0.694 ; ball_dirX                              ; ballX[5]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.892      ;
+; 0.695 ; ball_dirX                              ; ballX[3]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.893      ;
+; 0.696 ; ball_dirX                              ; ballX[8]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.894      ;
+; 0.696 ; ball_dirX                              ; ballX[7]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.894      ;
+; 0.728 ; ResetCollision                         ; CollisionY1                            ; clk          ; clk         ; 0.000        ; 0.384      ; 1.256      ;
+; 0.729 ; ResetCollision                         ; CollisionY2                            ; clk          ; clk         ; 0.000        ; 0.384      ; 1.257      ;
+; 0.742 ; hvsync_generator:syncgen|CounterX[5]   ; hvsync_generator:syncgen|vga_HS        ; clk          ; clk         ; 0.000        ; 0.055      ; 0.941      ;
+; 0.750 ; ball_inY                               ; vga_B~reg0                             ; clk          ; clk         ; 0.000        ; 0.387      ; 1.281      ;
+; 0.751 ; ball_inY                               ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.387      ; 1.282      ;
+; 0.752 ; hvsync_generator:syncgen|CounterY[3]   ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.384      ; 1.280      ;
+; 0.755 ; hvsync_generator:syncgen|CounterX[9]   ; ResetCollision                         ; clk          ; clk         ; 0.000        ; 0.057      ; 0.956      ;
+; 0.758 ; ballY[1]                               ; ballY[2]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.957      ;
+; 0.758 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[2]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.956      ;
+; 0.758 ; hvsync_generator:syncgen|CounterY[1]   ; hvsync_generator:syncgen|CounterY[2]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.956      ;
+; 0.759 ; hvsync_generator:syncgen|CounterX[1]   ; hvsync_generator:syncgen|CounterX[2]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.958      ;
+; 0.761 ; ballX[1]                               ; ballX[2]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.959      ;
+; 0.761 ; ballX[3]                               ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.959      ;
+; 0.761 ; hvsync_generator:syncgen|CounterX[2]   ; hvsync_generator:syncgen|CounterX[3]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.960      ;
+; 0.762 ; hvsync_generator:syncgen|CounterY[2]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.960      ;
+; 0.762 ; hvsync_generator:syncgen|CounterX[3]   ; hvsync_generator:syncgen|CounterX[4]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.961      ;
+; 0.765 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.963      ;
+; 0.765 ; hvsync_generator:syncgen|CounterY[1]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.963      ;
+; 0.766 ; ballY[7]                               ; ballY[8]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.965      ;
+; 0.767 ; ballX[2]                               ; ballX[3]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.965      ;
+; 0.768 ; hvsync_generator:syncgen|CounterX[2]   ; hvsync_generator:syncgen|CounterX[4]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.967      ;
+; 0.769 ; hvsync_generator:syncgen|CounterY[7]   ; hvsync_generator:syncgen|inDisplayArea ; clk          ; clk         ; 0.000        ; 0.054      ; 0.967      ;
+; 0.770 ; hvsync_generator:syncgen|CounterY[5]   ; hvsync_generator:syncgen|CounterY[6]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.968      ;
+; 0.771 ; ballY[4]                               ; ballY[5]                               ; clk          ; clk         ; 0.000        ; 0.055      ; 0.970      ;
+; 0.771 ; hvsync_generator:syncgen|CounterY[4]   ; hvsync_generator:syncgen|CounterY[5]   ; clk          ; clk         ; 0.000        ; 0.054      ; 0.969      ;
+; 0.771 ; ballX[8]                               ; ballX[9]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.969      ;
+; 0.771 ; ballX[6]                               ; ballX[7]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.969      ;
+; 0.773 ; ballX[4]                               ; ballX[5]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.971      ;
+; 0.774 ; ballX[2]                               ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.054      ; 0.972      ;
+; 0.776 ; PaddlePosition[1]                      ; PaddlePosition[2]                      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.974      ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'clk'                                                                        ;
++--------+--------------+----------------+-----------------+-------+------------+----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock ; Clock Edge ; Target                                 ;
++--------+--------------+----------------+-----------------+-------+------------+----------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; clk   ; Rise       ; clk                                    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionX1                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionX2                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionY1                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionY2                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[0]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[1]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[2]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[3]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[4]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[5]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[6]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[7]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[8]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ResetCollision                         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[0]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[1]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[2]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[3]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[4]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[5]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[6]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[7]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[8]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[9]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[0]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[1]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[2]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[3]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[4]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[5]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[6]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[7]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[8]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_dirX                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_dirY                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_inX                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_inY                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[4]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[5]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[6]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[7]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[8]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[9]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[4]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[5]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[6]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[7]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[8]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|inDisplayArea ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|vga_HS        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|vga_VS        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadAr[0]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadAr[1]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadAr[2]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadBr[0]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadBr[1]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadBr[2]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; vga_B~reg0                             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; vga_G~reg0                             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; vga_R~reg0                             ;
+; 0.177  ; 0.361        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionX1                            ;
+; 0.177  ; 0.361        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionX2                            ;
+; 0.177  ; 0.361        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionY1                            ;
+; 0.177  ; 0.361        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionY2                            ;
+; 0.177  ; 0.361        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; vga_B~reg0                             ;
+; 0.177  ; 0.361        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; vga_G~reg0                             ;
+; 0.177  ; 0.361        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; vga_R~reg0                             ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[0]                      ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ball_dirY                              ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[0]   ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[1]   ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[2]   ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[3]   ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[4]   ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[5]   ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[6]   ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[7]   ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[8]   ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[9]   ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; quadAr[0]                              ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; quadBr[0]                              ;
+; 0.184  ; 0.368        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[1]                      ;
+; 0.184  ; 0.368        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[2]                      ;
+; 0.184  ; 0.368        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[3]                      ;
+; 0.184  ; 0.368        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[4]                      ;
+; 0.184  ; 0.368        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[5]                      ;
+; 0.184  ; 0.368        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[6]                      ;
+; 0.184  ; 0.368        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[7]                      ;
+; 0.184  ; 0.368        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; PaddlePosition[8]                      ;
+; 0.184  ; 0.368        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ResetCollision                         ;
+; 0.184  ; 0.368        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[0]                               ;
++--------+--------------+----------------+-----------------+-------+------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; quadA     ; clk        ; 1.707 ; 2.063 ; Rise       ; clk             ;
+; quadB     ; clk        ; 1.705 ; 2.070 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; quadA     ; clk        ; -1.365 ; -1.706 ; Rise       ; clk             ;
+; quadB     ; clk        ; -1.363 ; -1.713 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; vga_B      ; clk        ; 5.426 ; 5.423 ; Rise       ; clk             ;
+; vga_G      ; clk        ; 5.933 ; 5.920 ; Rise       ; clk             ;
+; vga_R      ; clk        ; 5.922 ; 5.919 ; Rise       ; clk             ;
+; vga_h_sync ; clk        ; 5.392 ; 5.403 ; Rise       ; clk             ;
+; vga_v_sync ; clk        ; 4.965 ; 4.960 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; vga_B      ; clk        ; 5.320 ; 5.317 ; Rise       ; clk             ;
+; vga_G      ; clk        ; 5.806 ; 5.794 ; Rise       ; clk             ;
+; vga_R      ; clk        ; 5.796 ; 5.792 ; Rise       ; clk             ;
+; vga_h_sync ; clk        ; 5.287 ; 5.299 ; Rise       ; clk             ;
+; vga_v_sync ; clk        ; 4.878 ; 4.873 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -1.399 ; -45.743           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.180 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -74.969                         ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                          ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.399 ; PaddlePosition[4]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.541      ;
+; -1.351 ; PaddlePosition[3]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.493      ;
+; -1.331 ; PaddlePosition[5]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.473      ;
+; -1.327 ; PaddlePosition[6]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.469      ;
+; -1.246 ; PaddlePosition[7]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.388      ;
+; -1.243 ; ballY[5]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.195      ;
+; -1.239 ; PaddlePosition[4]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.381      ;
+; -1.239 ; PaddlePosition[4]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.381      ;
+; -1.238 ; PaddlePosition[4]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.380      ;
+; -1.238 ; PaddlePosition[4]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.380      ;
+; -1.237 ; hvsync_generator:syncgen|CounterX[9] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.379      ;
+; -1.235 ; PaddlePosition[4]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.377      ;
+; -1.234 ; PaddlePosition[4]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.376      ;
+; -1.191 ; PaddlePosition[3]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.333      ;
+; -1.191 ; PaddlePosition[3]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.333      ;
+; -1.190 ; PaddlePosition[3]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.332      ;
+; -1.190 ; PaddlePosition[3]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.332      ;
+; -1.188 ; ballY[6]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.140      ;
+; -1.187 ; PaddlePosition[3]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.329      ;
+; -1.186 ; PaddlePosition[3]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.328      ;
+; -1.181 ; hvsync_generator:syncgen|CounterX[4] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.323      ;
+; -1.171 ; PaddlePosition[5]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.313      ;
+; -1.171 ; PaddlePosition[5]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.313      ;
+; -1.170 ; PaddlePosition[5]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.312      ;
+; -1.170 ; PaddlePosition[5]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.312      ;
+; -1.167 ; PaddlePosition[6]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.309      ;
+; -1.167 ; PaddlePosition[6]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.309      ;
+; -1.166 ; PaddlePosition[6]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.308      ;
+; -1.166 ; PaddlePosition[6]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.308      ;
+; -1.163 ; PaddlePosition[6]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.305      ;
+; -1.162 ; PaddlePosition[6]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.304      ;
+; -1.162 ; PaddlePosition[5]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.304      ;
+; -1.162 ; PaddlePosition[5]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.304      ;
+; -1.143 ; ballY[5]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.287      ;
+; -1.135 ; ballY[4]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.087      ;
+; -1.127 ; hvsync_generator:syncgen|CounterX[0] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.035     ; 2.079      ;
+; -1.103 ; hvsync_generator:syncgen|CounterX[6] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.245      ;
+; -1.092 ; ballY[8]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.044      ;
+; -1.090 ; hvsync_generator:syncgen|CounterX[3] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.232      ;
+; -1.086 ; PaddlePosition[7]                    ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.228      ;
+; -1.086 ; PaddlePosition[7]                    ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.228      ;
+; -1.086 ; hvsync_generator:syncgen|CounterX[6] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.039      ;
+; -1.085 ; PaddlePosition[7]                    ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.227      ;
+; -1.085 ; PaddlePosition[7]                    ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.227      ;
+; -1.081 ; hvsync_generator:syncgen|CounterX[3] ; hvsync_generator:syncgen|CounterX[0] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.034      ;
+; -1.079 ; hvsync_generator:syncgen|CounterY[8] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.152      ; 2.218      ;
+; -1.077 ; PaddlePosition[7]                    ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.219      ;
+; -1.077 ; PaddlePosition[7]                    ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.219      ;
+; -1.073 ; ballY[6]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.217      ;
+; -1.068 ; hvsync_generator:syncgen|CounterX[9] ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.210      ;
+; -1.068 ; hvsync_generator:syncgen|CounterX[9] ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.210      ;
+; -1.064 ; ballY[1]                             ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.208      ;
+; -1.064 ; hvsync_generator:syncgen|CounterX[0] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.154      ; 2.205      ;
+; -1.063 ; ballY[1]                             ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.207      ;
+; -1.060 ; hvsync_generator:syncgen|CounterX[9] ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.202      ;
+; -1.059 ; hvsync_generator:syncgen|CounterX[9] ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.201      ;
+; -1.058 ; ballY[7]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.010      ;
+; -1.055 ; PaddlePosition[4]                    ; PaddlePosition[8]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 2.007      ;
+; -1.055 ; PaddlePosition[4]                    ; PaddlePosition[6]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 2.007      ;
+; -1.055 ; PaddlePosition[4]                    ; PaddlePosition[1]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 2.007      ;
+; -1.055 ; PaddlePosition[4]                    ; PaddlePosition[2]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 2.007      ;
+; -1.055 ; PaddlePosition[4]                    ; PaddlePosition[3]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 2.007      ;
+; -1.055 ; PaddlePosition[4]                    ; PaddlePosition[4]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 2.007      ;
+; -1.055 ; PaddlePosition[4]                    ; PaddlePosition[5]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 2.007      ;
+; -1.055 ; PaddlePosition[4]                    ; PaddlePosition[7]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 2.007      ;
+; -1.051 ; hvsync_generator:syncgen|CounterX[5] ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.193      ;
+; -1.046 ; hvsync_generator:syncgen|CounterX[9] ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.188      ;
+; -1.045 ; hvsync_generator:syncgen|CounterX[9] ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.187      ;
+; -1.044 ; PaddlePosition[3]                    ; PaddlePosition[8]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 1.996      ;
+; -1.044 ; PaddlePosition[3]                    ; PaddlePosition[6]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 1.996      ;
+; -1.044 ; PaddlePosition[3]                    ; PaddlePosition[1]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 1.996      ;
+; -1.044 ; PaddlePosition[3]                    ; PaddlePosition[2]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 1.996      ;
+; -1.044 ; PaddlePosition[3]                    ; PaddlePosition[3]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 1.996      ;
+; -1.044 ; PaddlePosition[3]                    ; PaddlePosition[4]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 1.996      ;
+; -1.044 ; PaddlePosition[3]                    ; PaddlePosition[5]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 1.996      ;
+; -1.044 ; PaddlePosition[3]                    ; PaddlePosition[7]                    ; clk          ; clk         ; 1.000        ; -0.035     ; 1.996      ;
+; -1.043 ; ballX[4]                             ; CollisionY1                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.187      ;
+; -1.042 ; ballX[4]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.186      ;
+; -1.042 ; ballY[4]                             ; CollisionY2                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.186      ;
+; -1.038 ; PaddlePosition[0]                    ; vga_G~reg0                           ; clk          ; clk         ; 1.000        ; 0.154      ; 2.179      ;
+; -1.018 ; ballX[6]                             ; ball_inX                             ; clk          ; clk         ; 1.000        ; -0.035     ; 1.970      ;
+; -1.015 ; ballY[4]                             ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.159      ;
+; -1.014 ; ballY[4]                             ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.158      ;
+; -1.012 ; hvsync_generator:syncgen|CounterX[4] ; vga_B~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.154      ;
+; -1.012 ; hvsync_generator:syncgen|CounterX[4] ; vga_R~reg0                           ; clk          ; clk         ; 1.000        ; 0.155      ; 2.154      ;
+; -1.012 ; ballY[5]                             ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.156      ;
+; -1.011 ; ballY[3]                             ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.155      ;
+; -1.011 ; ballY[5]                             ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.155      ;
+; -1.010 ; ballY[3]                             ; CollisionX1                          ; clk          ; clk         ; 1.000        ; 0.157      ; 2.154      ;
+; -1.006 ; PaddlePosition[0]                    ; PaddlePosition[8]                    ; clk          ; clk         ; 1.000        ; -0.036     ; 1.957      ;
+; -1.006 ; PaddlePosition[0]                    ; PaddlePosition[6]                    ; clk          ; clk         ; 1.000        ; -0.036     ; 1.957      ;
+; -1.006 ; PaddlePosition[0]                    ; PaddlePosition[1]                    ; clk          ; clk         ; 1.000        ; -0.036     ; 1.957      ;
+; -1.006 ; PaddlePosition[0]                    ; PaddlePosition[2]                    ; clk          ; clk         ; 1.000        ; -0.036     ; 1.957      ;
+; -1.006 ; PaddlePosition[0]                    ; PaddlePosition[3]                    ; clk          ; clk         ; 1.000        ; -0.036     ; 1.957      ;
+; -1.006 ; PaddlePosition[0]                    ; PaddlePosition[4]                    ; clk          ; clk         ; 1.000        ; -0.036     ; 1.957      ;
+; -1.006 ; PaddlePosition[0]                    ; PaddlePosition[5]                    ; clk          ; clk         ; 1.000        ; -0.036     ; 1.957      ;
+; -1.006 ; PaddlePosition[0]                    ; PaddlePosition[7]                    ; clk          ; clk         ; 1.000        ; -0.036     ; 1.957      ;
+; -1.005 ; ballY[1]                             ; ball_inY                             ; clk          ; clk         ; 1.000        ; -0.035     ; 1.957      ;
+; -1.004 ; hvsync_generator:syncgen|CounterX[4] ; CollisionX2                          ; clk          ; clk         ; 1.000        ; 0.155      ; 2.146      ;
+; -1.003 ; PaddlePosition[4]                    ; PaddlePosition[0]                    ; clk          ; clk         ; 1.000        ; -0.034     ; 1.956      ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                              ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.180 ; CollisionX1                            ; CollisionX1                            ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; CollisionX2                            ; CollisionX2                            ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; CollisionY1                            ; CollisionY1                            ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; CollisionY2                            ; CollisionY2                            ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.188 ; ball_inX                               ; ball_inX                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.307      ;
+; 0.188 ; ball_inY                               ; ball_inY                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.307      ;
+; 0.188 ; ball_dirX                              ; ball_dirX                              ; clk          ; clk         ; 0.000        ; 0.035      ; 0.307      ;
+; 0.188 ; ball_dirY                              ; ball_dirY                              ; clk          ; clk         ; 0.000        ; 0.035      ; 0.307      ;
+; 0.188 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[0]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.307      ;
+; 0.195 ; hvsync_generator:syncgen|inDisplayArea ; hvsync_generator:syncgen|inDisplayArea ; clk          ; clk         ; 0.000        ; 0.035      ; 0.314      ;
+; 0.195 ; ballX[0]                               ; ballX[0]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.314      ;
+; 0.195 ; ballY[0]                               ; ballY[0]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.314      ;
+; 0.219 ; hvsync_generator:syncgen|CounterY[8]   ; hvsync_generator:syncgen|CounterY[8]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.338      ;
+; 0.261 ; quadAr[0]                              ; quadAr[1]                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.381      ;
+; 0.267 ; quadBr[0]                              ; quadBr[1]                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.387      ;
+; 0.273 ; quadAr[1]                              ; quadAr[2]                              ; clk          ; clk         ; 0.000        ; 0.035      ; 0.392      ;
+; 0.300 ; hvsync_generator:syncgen|CounterX[7]   ; hvsync_generator:syncgen|vga_HS        ; clk          ; clk         ; 0.000        ; 0.035      ; 0.419      ;
+; 0.307 ; ballX[2]                               ; ballX[2]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; ballY[1]                               ; ballY[1]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; hvsync_generator:syncgen|CounterX[7]   ; hvsync_generator:syncgen|CounterX[7]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; hvsync_generator:syncgen|CounterX[2]   ; hvsync_generator:syncgen|CounterX[2]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; hvsync_generator:syncgen|CounterX[1]   ; hvsync_generator:syncgen|CounterX[1]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.308 ; ballX[3]                               ; ballX[3]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; ballX[1]                               ; ballX[1]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.310 ; ball_dirX                              ; ballX[9]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.429      ;
+; 0.310 ; hvsync_generator:syncgen|CounterY[2]   ; hvsync_generator:syncgen|CounterY[2]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.429      ;
+; 0.310 ; hvsync_generator:syncgen|CounterY[1]   ; hvsync_generator:syncgen|CounterY[1]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.429      ;
+; 0.310 ; hvsync_generator:syncgen|CounterX[3]   ; hvsync_generator:syncgen|CounterX[3]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.429      ;
+; 0.311 ; ballX[8]                               ; ballX[8]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.430      ;
+; 0.311 ; ballX[9]                               ; ballX[9]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.430      ;
+; 0.312 ; ballX[4]                               ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.431      ;
+; 0.312 ; ballX[6]                               ; ballX[6]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.431      ;
+; 0.312 ; ballY[8]                               ; ballY[8]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.431      ;
+; 0.312 ; ballY[4]                               ; ballY[4]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.431      ;
+; 0.312 ; hvsync_generator:syncgen|CounterY[5]   ; hvsync_generator:syncgen|CounterY[5]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.431      ;
+; 0.313 ; ballY[7]                               ; ballY[7]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.432      ;
+; 0.313 ; PaddlePosition[8]                      ; PaddlePosition[8]                      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.432      ;
+; 0.315 ; hvsync_generator:syncgen|CounterY[4]   ; hvsync_generator:syncgen|CounterY[4]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.434      ;
+; 0.315 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[1]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.434      ;
+; 0.316 ; hvsync_generator:syncgen|CounterX[3]   ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.233      ; 0.633      ;
+; 0.317 ; hvsync_generator:syncgen|CounterY[3]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.436      ;
+; 0.317 ; hvsync_generator:syncgen|CounterX[6]   ; hvsync_generator:syncgen|CounterX[6]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.436      ;
+; 0.317 ; hvsync_generator:syncgen|CounterX[4]   ; hvsync_generator:syncgen|CounterX[4]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.436      ;
+; 0.318 ; ballY[2]                               ; ballY[2]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.437      ;
+; 0.318 ; PaddlePosition[1]                      ; PaddlePosition[1]                      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.437      ;
+; 0.319 ; PaddlePosition[2]                      ; PaddlePosition[2]                      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.438      ;
+; 0.326 ; hvsync_generator:syncgen|CounterY[7]   ; hvsync_generator:syncgen|CounterY[7]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.445      ;
+; 0.329 ; hvsync_generator:syncgen|CounterY[6]   ; hvsync_generator:syncgen|CounterY[6]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.448      ;
+; 0.350 ; quadBr[1]                              ; quadBr[2]                              ; clk          ; clk         ; 0.000        ; 0.035      ; 0.469      ;
+; 0.361 ; hvsync_generator:syncgen|CounterX[8]   ; hvsync_generator:syncgen|vga_HS        ; clk          ; clk         ; 0.000        ; 0.035      ; 0.480      ;
+; 0.375 ; ball_inY                               ; ball_inX                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.494      ;
+; 0.377 ; ballX[7]                               ; ballX[7]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.496      ;
+; 0.380 ; ballY[3]                               ; ballY[3]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.499      ;
+; 0.386 ; ballX[5]                               ; ballX[5]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.505      ;
+; 0.388 ; ballY[6]                               ; ballY[6]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.507      ;
+; 0.389 ; PaddlePosition[6]                      ; PaddlePosition[6]                      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.508      ;
+; 0.389 ; PaddlePosition[4]                      ; PaddlePosition[4]                      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.508      ;
+; 0.389 ; PaddlePosition[7]                      ; PaddlePosition[7]                      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.508      ;
+; 0.391 ; PaddlePosition[5]                      ; PaddlePosition[5]                      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.510      ;
+; 0.394 ; PaddlePosition[3]                      ; PaddlePosition[3]                      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.513      ;
+; 0.395 ; hvsync_generator:syncgen|inDisplayArea ; vga_B~reg0                             ; clk          ; clk         ; 0.000        ; 0.230      ; 0.709      ;
+; 0.395 ; hvsync_generator:syncgen|inDisplayArea ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.230      ; 0.709      ;
+; 0.404 ; ball_dirX                              ; ballX[1]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.523      ;
+; 0.407 ; ball_dirX                              ; ballX[2]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.526      ;
+; 0.408 ; ball_dirX                              ; ballX[3]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.527      ;
+; 0.408 ; ball_dirX                              ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.527      ;
+; 0.410 ; ball_dirX                              ; ballX[6]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.529      ;
+; 0.410 ; ball_dirX                              ; ballX[5]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.529      ;
+; 0.411 ; ball_dirX                              ; ballX[8]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.530      ;
+; 0.411 ; ball_dirX                              ; ballX[7]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.530      ;
+; 0.434 ; ResetCollision                         ; CollisionY1                            ; clk          ; clk         ; 0.000        ; 0.230      ; 0.748      ;
+; 0.434 ; ResetCollision                         ; CollisionY2                            ; clk          ; clk         ; 0.000        ; 0.230      ; 0.748      ;
+; 0.440 ; hvsync_generator:syncgen|CounterX[5]   ; hvsync_generator:syncgen|vga_HS        ; clk          ; clk         ; 0.000        ; 0.035      ; 0.559      ;
+; 0.446 ; hvsync_generator:syncgen|CounterX[9]   ; ResetCollision                         ; clk          ; clk         ; 0.000        ; 0.038      ; 0.568      ;
+; 0.446 ; hvsync_generator:syncgen|CounterY[3]   ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.230      ; 0.760      ;
+; 0.446 ; ball_inY                               ; vga_B~reg0                             ; clk          ; clk         ; 0.000        ; 0.235      ; 0.765      ;
+; 0.447 ; ball_inY                               ; vga_R~reg0                             ; clk          ; clk         ; 0.000        ; 0.235      ; 0.766      ;
+; 0.455 ; ballY[1]                               ; ballY[2]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.456 ; ballX[1]                               ; ballX[2]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.456 ; hvsync_generator:syncgen|CounterX[1]   ; hvsync_generator:syncgen|CounterX[2]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.456 ; ballX[3]                               ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.459 ; hvsync_generator:syncgen|CounterY[2]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.578      ;
+; 0.459 ; hvsync_generator:syncgen|CounterX[3]   ; hvsync_generator:syncgen|CounterX[4]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.578      ;
+; 0.461 ; ballY[7]                               ; ballY[8]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.580      ;
+; 0.463 ; hvsync_generator:syncgen|CounterY[1]   ; hvsync_generator:syncgen|CounterY[2]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.582      ;
+; 0.464 ; hvsync_generator:syncgen|CounterY[4]   ; hvsync_generator:syncgen|CounterY[5]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.583      ;
+; 0.465 ; hvsync_generator:syncgen|CounterX[2]   ; hvsync_generator:syncgen|CounterX[3]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.584      ;
+; 0.466 ; ballX[2]                               ; ballX[3]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.585      ;
+; 0.466 ; hvsync_generator:syncgen|CounterY[1]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.585      ;
+; 0.467 ; CollisionY1                            ; ball_dirY                              ; clk          ; clk         ; 0.000        ; -0.154     ; 0.397      ;
+; 0.467 ; PaddlePosition[1]                      ; PaddlePosition[2]                      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.586      ;
+; 0.467 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[2]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.586      ;
+; 0.468 ; hvsync_generator:syncgen|CounterX[2]   ; hvsync_generator:syncgen|CounterX[4]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.587      ;
+; 0.469 ; ballX[2]                               ; ballX[4]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.588      ;
+; 0.470 ; ballX[8]                               ; ballX[9]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.589      ;
+; 0.470 ; hvsync_generator:syncgen|CounterX[5]   ; hvsync_generator:syncgen|CounterX[6]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.589      ;
+; 0.470 ; hvsync_generator:syncgen|CounterY[5]   ; hvsync_generator:syncgen|CounterY[6]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.589      ;
+; 0.470 ; hvsync_generator:syncgen|CounterY[0]   ; hvsync_generator:syncgen|CounterY[3]   ; clk          ; clk         ; 0.000        ; 0.035      ; 0.589      ;
+; 0.471 ; ballY[4]                               ; ballY[5]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.590      ;
+; 0.471 ; ballX[6]                               ; ballX[7]                               ; clk          ; clk         ; 0.000        ; 0.035      ; 0.590      ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'clk'                                                                        ;
++--------+--------------+----------------+-----------------+-------+------------+----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock ; Clock Edge ; Target                                 ;
++--------+--------------+----------------+-----------------+-------+------------+----------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; clk   ; Rise       ; clk                                    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionX1                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionX2                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionY1                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; CollisionY2                            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[0]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[1]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[2]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[3]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[4]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[5]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[6]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[7]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; PaddlePosition[8]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ResetCollision                         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[0]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[1]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[2]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[3]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[4]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[5]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[6]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[7]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[8]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballX[9]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[0]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[1]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[2]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[3]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[4]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[5]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[6]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[7]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ballY[8]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_dirX                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_dirY                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_inX                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; ball_inY                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[4]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[5]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[6]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[7]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[8]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterX[9]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[4]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[5]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[6]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[7]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[8]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|inDisplayArea ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|vga_HS        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; hvsync_generator:syncgen|vga_VS        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadAr[0]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadAr[1]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadAr[2]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadBr[0]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadBr[1]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; quadBr[2]                              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; vga_B~reg0                             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; vga_G~reg0                             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; vga_R~reg0                             ;
+; -0.084 ; 0.100        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionX1                            ;
+; -0.084 ; 0.100        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionX2                            ;
+; -0.084 ; 0.100        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionY1                            ;
+; -0.084 ; 0.100        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; CollisionY2                            ;
+; -0.084 ; 0.100        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; vga_B~reg0                             ;
+; -0.084 ; 0.100        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; vga_G~reg0                             ;
+; -0.084 ; 0.100        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; vga_R~reg0                             ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ResetCollision                         ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[0]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[1]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[2]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[3]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[4]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[5]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[6]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[7]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[8]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballX[9]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ballY[0]                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ball_dirX                              ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ball_inX                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; ball_inY                               ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[0]   ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[1]   ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[2]   ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[3]   ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[4]   ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[5]   ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[6]   ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[7]   ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; hvsync_generator:syncgen|CounterY[8]   ;
++--------+--------------+----------------+-----------------+-------+------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; quadA     ; clk        ; 1.106 ; 1.736 ; Rise       ; clk             ;
+; quadB     ; clk        ; 1.111 ; 1.738 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; quadA     ; clk        ; -0.888 ; -1.502 ; Rise       ; clk             ;
+; quadB     ; clk        ; -0.892 ; -1.504 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; vga_B      ; clk        ; 3.430 ; 3.454 ; Rise       ; clk             ;
+; vga_G      ; clk        ; 3.744 ; 3.812 ; Rise       ; clk             ;
+; vga_R      ; clk        ; 3.746 ; 3.804 ; Rise       ; clk             ;
+; vga_h_sync ; clk        ; 3.484 ; 3.422 ; Rise       ; clk             ;
+; vga_v_sync ; clk        ; 3.177 ; 3.159 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; vga_B      ; clk        ; 3.363 ; 3.385 ; Rise       ; clk             ;
+; vga_G      ; clk        ; 3.663 ; 3.728 ; Rise       ; clk             ;
+; vga_R      ; clk        ; 3.665 ; 3.721 ; Rise       ; clk             ;
+; vga_h_sync ; clk        ; 3.414 ; 3.355 ; Rise       ; clk             ;
+; vga_v_sync ; clk        ; 3.119 ; 3.103 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.348   ; 0.180 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -3.348   ; 0.180 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -130.0   ; 0.0   ; 0.0      ; 0.0     ; -74.969             ;
+;  clk             ; -130.000 ; 0.000 ; N/A      ; N/A     ; -74.969             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; quadA     ; clk        ; 1.970 ; 2.422 ; Rise       ; clk             ;
+; quadB     ; clk        ; 1.975 ; 2.449 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; quadA     ; clk        ; -0.888 ; -1.502 ; Rise       ; clk             ;
+; quadB     ; clk        ; -0.892 ; -1.504 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; vga_B      ; clk        ; 5.703 ; 5.723 ; Rise       ; clk             ;
+; vga_G      ; clk        ; 6.255 ; 6.291 ; Rise       ; clk             ;
+; vga_R      ; clk        ; 6.242 ; 6.292 ; Rise       ; clk             ;
+; vga_h_sync ; clk        ; 5.701 ; 5.679 ; Rise       ; clk             ;
+; vga_v_sync ; clk        ; 5.219 ; 5.196 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; vga_B      ; clk        ; 3.363 ; 3.385 ; Rise       ; clk             ;
+; vga_G      ; clk        ; 3.663 ; 3.728 ; Rise       ; clk             ;
+; vga_R      ; clk        ; 3.665 ; 3.721 ; Rise       ; clk             ;
+; vga_h_sync ; clk        ; 3.414 ; 3.355 ; Rise       ; clk             ;
+; vga_v_sync ; clk        ; 3.119 ; 3.103 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; vga_h_sync    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; vga_v_sync    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; vga_R         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; vga_G         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; vga_B         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; quadB                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; quadA                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; vga_h_sync    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; vga_v_sync    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; vga_R         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; vga_G         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; vga_B         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-07 V                   ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-07 V                  ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-07 V                   ; 2.35 V              ; -0.00444 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-10 s                  ; 9.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-07 V                  ; 2.35 V             ; -0.00444 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-10 s                 ; 9.82e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; vga_h_sync    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; vga_v_sync    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; vga_R         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; vga_G         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; vga_B         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.72 V              ; -0.0747 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-10 s                   ; 3.01e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.72 V             ; -0.0747 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-10 s                  ; 3.01e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-08 V                   ; 2.7 V               ; -0.0212 V           ; 0.204 V                              ; 0.049 V                              ; 4.85e-10 s                  ; 6.73e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-08 V                  ; 2.7 V              ; -0.0212 V          ; 0.204 V                             ; 0.049 V                             ; 4.85e-10 s                 ; 6.73e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2047     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2047     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 2     ; 2    ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 5     ; 5    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Mon Jul 09 19:52:01 2018
+Info: Command: quartus_sta testeverilog -c testeverilog
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'testeverilog.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.348
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.348            -130.000 clk 
+Info (332146): Worst-case hold slack is 0.345
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.345               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -71.000 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.896
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.896            -110.926 clk 
+Info (332146): Worst-case hold slack is 0.299
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.299               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -71.000 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.399
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.399             -45.743 clk 
+Info (332146): Worst-case hold slack is 0.180
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.180               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -74.969 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4641 megabytes
+    Info: Processing ended: Mon Jul 09 19:52:02 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

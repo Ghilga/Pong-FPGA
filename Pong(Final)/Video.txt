@@ -1,0 +1,3 @@
+Res: 640x480
+Freq H: 60Hz
+Freq V: 31KHz

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C16F484C6
-set_global_assignment -name TOP_LEVEL_ENTITY Block1
+set_global_assignment -name TOP_LEVEL_ENTITY escore
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:12:35  JULY 10, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -50,6 +50,25 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_F13 -to ledG
+set_location_assignment PIN_F1 -to Clk
+set_location_assignment PIN_E11 -to ledA
+set_location_assignment PIN_F11 -to ledB
+set_location_assignment PIN_H12 -to ledC
+set_location_assignment PIN_H13 -to ledD
+set_location_assignment PIN_G12 -to ledE
+set_location_assignment PIN_F12 -to ledF
+set_location_assignment PIN_A13 -to ledA8
+set_location_assignment PIN_B13 -to ledB9
+set_location_assignment PIN_C13 -to ledC10
+set_location_assignment PIN_A14 -to ledD11
+set_location_assignment PIN_B14 -to ledE12
+set_location_assignment PIN_E14 -to ledF13
+set_location_assignment PIN_A15 -to ledG14
+set_location_assignment PIN_G3 -to reset
+set_global_assignment -name BDF_FILE escore.bdf
+set_global_assignment -name VHDL_FILE contador.vhd
+set_global_assignment -name BDF_FILE ContAssin4bits.bdf
 set_global_assignment -name BDF_FILE FuncaoG.bdf
 set_global_assignment -name BDF_FILE FuncaoF.bdf
 set_global_assignment -name BDF_FILE FuncaoE.bdf
@@ -58,17 +77,6 @@ set_global_assignment -name BDF_FILE FuncaoC.bdf
 set_global_assignment -name BDF_FILE FuncaoB.bdf
 set_global_assignment -name BDF_FILE FuncaoA.bdf
 set_global_assignment -name BDF_FILE Display7Segmentos.bdf
-set_global_assignment -name VHDL_FILE escore.vhd
-set_global_assignment -name BDF_FILE Block1.bdf
-set_location_assignment PIN_F1 -to Botao
-set_location_assignment PIN_F13 -to ledG
-set_location_assignment PIN_G21 -to Clk
-set_location_assignment PIN_E11 -to ledA
-set_location_assignment PIN_F11 -to ledB
-set_location_assignment PIN_H12 -to ledC
-set_location_assignment PIN_H13 -to ledD
-set_location_assignment PIN_G12 -to ledE
-set_location_assignment PIN_F12 -to ledF
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

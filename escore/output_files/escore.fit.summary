@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Jul 10 18:17:30 2018
+Fitter Status : Successful - Wed Jul 11 17:57:26 2018
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : escore
-Top-level Entity Name : Block1
+Top-level Entity Name : escore
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 59 / 15,408 ( < 1 % )
-    Total combinational functions : 58 / 15,408 ( < 1 % )
-    Dedicated logic registers : 30 / 15,408 ( < 1 % )
-Total registers : 30
-Total pins : 8 / 347 ( 2 % )
+Total logic elements : 28 / 15,408 ( < 1 % )
+    Total combinational functions : 28 / 15,408 ( < 1 % )
+    Dedicated logic registers : 8 / 15,408 ( < 1 % )
+Total registers : 8
+Total pins : 16 / 347 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )

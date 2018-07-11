@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Leo\UFRGS\CircuitosDigitais\Pong\Teste\simulation\qsim
+vclk_pixel
+Z1 !s100 fanlP584W[Z?_V;4JSV6z0
+Z2 I@iT8F^aWcFYCZO>`P1BDf0
+Z3 VfK:RzmaPP6ZadeIX]LRL12
+Z4 dD:\Leo\UFRGS\CircuitosDigitais\Pong\Teste\simulation\qsim
+Z5 w1530986749
+Z6 8Teste.vo
+Z7 FTeste.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Teste.vo|
+Z10 o-work work -O0
+Z11 !s108 1530986750.558000
+Z12 !s107 Teste.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vclk_pixel_vlg_check_tst
+Z13 !s100 0l9ZoO1RzPGVU?P<OLP@?1
+Z14 IA_G^9DHcd?RJz?6iRI:JV2
+Z15 V2oFVjEaWYb1Wi1S_Ym^AM1
+R4
+Z16 w1530986748
+Z17 8Waveform.vwf.vt
+Z18 FWaveform.vwf.vt
+L0 57
+R8
+r1
+31
+Z19 !s108 1530986750.652000
+Z20 !s107 Waveform.vwf.vt|
+Z21 !s90 -work|work|Waveform.vwf.vt|
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vclk_pixel_vlg_sample_tst
+Z22 !s100 ^Il8iZLWMIVXo_D<@a:j82
+Z23 I8^l0=aQcHL[0CT]ZC9jKW2
+Z24 VCbe_:dZ8ej;Rmg1Q5SS<N1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+31
+R19
+R20
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vclk_pixel_vlg_vec_tst
+Z25 I3k^8RePeZg<IXY3VHWVU;3
+Z26 Vk68JKDGZlY_l:RgaD>5T@2
+R4
+R16
+R17
+R18
+Z27 L0 152
+R8
+r1
+31
+R19
+R20
+R21
+R10
+Z28 !s100 _m61l<_a<fHk0F3m6zc;O2
+!i10b 1
+!s85 0
+!s101 -O0
+vtimer_1ms
+Z29 !s100 ;LSk]di<kz[Pkd>S7@z;62
+Z30 IQd7id:RjaF0M>[3FjC^6@0
+Z31 VbFjAM[PakkbM>S:<3nL0C3
+R4
+Z32 w1530988812
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+!i10b 1
+!s85 0
+Z33 !s108 1530988813.283000
+R12
+!s101 -O0
+vtimer_1ms_vlg_check_tst
+!i10b 1
+Z34 !s100 oE<AX`RiM5V2UOHa1FUSD2
+Z35 I[B=J0eThel;Q1Sn_33ReX0
+Z36 VTPfRgMiUjIh5BXKgX9VU;0
+R4
+Z37 w1530988811
+Z38 8Waveform1.vwf.vt
+Z39 FWaveform1.vwf.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z40 !s108 1530988813.414000
+Z41 !s107 Waveform1.vwf.vt|
+Z42 !s90 -work|work|Waveform1.vwf.vt|
+!s101 -O0
+R10
+vtimer_1ms_vlg_sample_tst
+!i10b 1
+Z43 !s100 RCJLB<U5A2g@:S__IhG>?1
+Z44 IYMRnoF[8JQ6X1CDH=9YFE2
+Z45 VVj7zO[?R]]_bh[2V?]S?k3
+R4
+R37
+R38
+R39
+L0 29
+R8
+r1
+!s85 0
+31
+R40
+R41
+R42
+!s101 -O0
+R10
+vtimer_1ms_vlg_vec_tst
+!i10b 1
+!s100 bDEnL02U6]FU03UjYhacO0
+ID`o`8iOi7<[jZd5lZ6VoL0
+Z46 VjaiGlGmk[SYbX_0MW6;=g0
+R4
+R37
+R38
+R39
+R27
+R8
+r1
+!s85 0
+31
+R40
+R41
+R42
+!s101 -O0
+R10

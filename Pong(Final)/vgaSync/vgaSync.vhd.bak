@@ -1,0 +1,9 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+USE ieee.std_logic_unsigned.all ;
+ENTITY vgaSync IS
+PORT(
+	Clk: in std_logic;
+	x: out std_logic_vector (9 DOWNTO 0);
+	y: out std_logic_vector (8 DOWNTO 0)
+);

@@ -1,0 +1,888 @@
+|Top
+vgahs <= tela:inst.vgahs
+clk => clk_pixel:inst4.clk
+ps2_clk => ps2_keyboard:inst5.ps2_clk
+ps2_data => ps2_keyboard:inst5.ps2_data
+vgavs <= tela:inst.vgavs
+seg1A <= Display7Segmentos:inst9.ledA
+Reset => contador:inst3.reset
+Reset => contador:inst8.reset
+seg1B <= Display7Segmentos:inst9.ledB
+seg1C <= Display7Segmentos:inst9.ledC
+seg1D <= Display7Segmentos:inst9.ledD
+seg1E <= Display7Segmentos:inst9.ledE
+seg1F <= Display7Segmentos:inst9.ledF
+seg1G <= Display7Segmentos:inst9.ledG
+seg2A <= Display7Segmentos:inst10.ledA
+seg2B <= Display7Segmentos:inst10.ledB
+seg2C <= Display7Segmentos:inst10.ledC
+seg2D <= Display7Segmentos:inst10.ledD
+seg2E <= Display7Segmentos:inst10.ledE
+seg2F <= Display7Segmentos:inst10.ledF
+seg2G <= Display7Segmentos:inst10.ledG
+seg3A <= Display7Segmentos:inst11.ledA
+seg3B <= Display7Segmentos:inst11.ledB
+seg3C <= Display7Segmentos:inst11.ledC
+seg3D <= Display7Segmentos:inst11.ledD
+seg3E <= Display7Segmentos:inst11.ledE
+seg3F <= Display7Segmentos:inst11.ledF
+seg3G <= Display7Segmentos:inst11.ledG
+seg4B <= Display7Segmentos:inst13.ledB
+seg4C <= Display7Segmentos:inst13.ledC
+seg4D <= Display7Segmentos:inst13.ledD
+seg4E <= Display7Segmentos:inst13.ledE
+seg4F <= Display7Segmentos:inst13.ledF
+seg4G <= Display7Segmentos:inst13.ledG
+seg4A <= Display7Segmentos:inst13.ledA
+vgaB[0] <= tela:inst.vgab[0]
+vgaB[1] <= tela:inst.vgab[1]
+vgaB[2] <= tela:inst.vgab[2]
+vgaB[3] <= tela:inst.vgab[3]
+vgaG[0] <= tela:inst.vgag[0]
+vgaG[1] <= tela:inst.vgag[1]
+vgaG[2] <= tela:inst.vgag[2]
+vgaG[3] <= tela:inst.vgag[3]
+vgaR[0] <= tela:inst.vgar[0]
+vgaR[1] <= tela:inst.vgar[1]
+vgaR[2] <= tela:inst.vgar[2]
+vgaR[3] <= tela:inst.vgar[3]
+
+
+|Top|tela:inst
+clk => sync:C1.clk
+player1UP => sync:C1.player1UP
+player1DOWN => sync:C1.player1DOWN
+player2UP => sync:C1.player2UP
+player2DOWN => sync:C1.player2DOWN
+vgahs <= sync:C1.hsync
+vgavs <= sync:C1.vsync
+vgar[0] <= sync:C1.r[0]
+vgar[1] <= sync:C1.r[1]
+vgar[2] <= sync:C1.r[2]
+vgar[3] <= sync:C1.r[3]
+vgag[0] <= sync:C1.g[0]
+vgag[1] <= sync:C1.g[1]
+vgag[2] <= sync:C1.g[2]
+vgag[3] <= sync:C1.g[3]
+vgab[0] <= sync:C1.b[0]
+vgab[1] <= sync:C1.b[1]
+vgab[2] <= sync:C1.b[2]
+vgab[3] <= sync:C1.b[3]
+p1score <= sync:C1.p1score
+p2score <= sync:C1.p2score
+
+
+|Top|tela:inst|sync:C1
+clk => vsync~reg0.CLK
+clk => hsync~reg0.CLK
+clk => v[0].CLK
+clk => v[1].CLK
+clk => v[2].CLK
+clk => v[3].CLK
+clk => v[4].CLK
+clk => v[5].CLK
+clk => v[6].CLK
+clk => v[7].CLK
+clk => v[8].CLK
+clk => v[9].CLK
+clk => h[0].CLK
+clk => h[1].CLK
+clk => h[2].CLK
+clk => h[3].CLK
+clk => h[4].CLK
+clk => h[5].CLK
+clk => h[6].CLK
+clk => h[7].CLK
+clk => h[8].CLK
+clk => h[9].CLK
+clk => p2v[0].CLK
+clk => p2v[1].CLK
+clk => p2v[2].CLK
+clk => p2v[3].CLK
+clk => p2v[4].CLK
+clk => p2v[5].CLK
+clk => p2v[6].CLK
+clk => p2v[7].CLK
+clk => p2v[8].CLK
+clk => p2v[9].CLK
+clk => p1v[0].CLK
+clk => p1v[1].CLK
+clk => p1v[2].CLK
+clk => p1v[3].CLK
+clk => p1v[4].CLK
+clk => p1v[5].CLK
+clk => p1v[6].CLK
+clk => p1v[7].CLK
+clk => p1v[8].CLK
+clk => p1v[9].CLK
+clk => b[0]~reg0.CLK
+clk => b[1]~reg0.CLK
+clk => b[2]~reg0.CLK
+clk => b[3]~reg0.CLK
+clk => g[0]~reg0.CLK
+clk => g[1]~reg0.CLK
+clk => g[2]~reg0.CLK
+clk => g[3]~reg0.CLK
+clk => r[0]~reg0.CLK
+clk => r[1]~reg0.CLK
+clk => r[2]~reg0.CLK
+clk => r[3]~reg0.CLK
+clk => slowclk.CLK
+clk => balltimer[0].CLK
+clk => balltimer[1].CLK
+clk => balltimer[2].CLK
+clk => balltimer[3].CLK
+clk => balltimer[4].CLK
+clk => balltimer[5].CLK
+clk => balltimer[6].CLK
+clk => balltimer[7].CLK
+clk => balltimer[8].CLK
+clk => balltimer[9].CLK
+clk => balltimer[10].CLK
+clk => balltimer[11].CLK
+clk => balltimer[12].CLK
+clk => balltimer[13].CLK
+clk => balltimer[14].CLK
+clk => balltimer[15].CLK
+clk => balltimer[16].CLK
+player1UP => process_0.IN1
+player1DOWN => process_0.IN1
+player2UP => process_0.IN1
+player2DOWN => process_0.IN1
+hsync <= hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vsync <= vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[0] <= r[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= r[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= r[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= r[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+g[0] <= g[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+g[1] <= g[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+g[2] <= g[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+g[3] <= g[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b[0] <= b[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b[1] <= b[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b[2] <= b[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b[3] <= b[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p1score <= p1ponto.DB_MAX_OUTPUT_PORT_TYPE
+p2score <= p2ponto.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|clk_pixel:inst4
+div_two <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+
+
+|Top|debounce2:inst12
+click <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+clk => inst1.CLK
+pin_name1 => inst.DATAIN
+
+
+|Top|tecladoIn:inst2
+ps2_code_new => player2DOWN~reg0.CLK
+ps2_code_new => player2UP~reg0.CLK
+ps2_code_new => player1DOWN~reg0.CLK
+ps2_code_new => player1UP~reg0.CLK
+ps2_code[0] => Equal0.IN15
+ps2_code[0] => Equal1.IN15
+ps2_code[0] => Equal2.IN15
+ps2_code[0] => Equal3.IN15
+ps2_code[1] => Equal0.IN14
+ps2_code[1] => Equal1.IN14
+ps2_code[1] => Equal2.IN14
+ps2_code[1] => Equal3.IN14
+ps2_code[2] => Equal0.IN13
+ps2_code[2] => Equal1.IN13
+ps2_code[2] => Equal2.IN13
+ps2_code[2] => Equal3.IN13
+ps2_code[3] => Equal0.IN12
+ps2_code[3] => Equal1.IN12
+ps2_code[3] => Equal2.IN12
+ps2_code[3] => Equal3.IN12
+ps2_code[4] => Equal0.IN11
+ps2_code[4] => Equal1.IN11
+ps2_code[4] => Equal2.IN11
+ps2_code[4] => Equal3.IN11
+ps2_code[5] => Equal0.IN10
+ps2_code[5] => Equal1.IN10
+ps2_code[5] => Equal2.IN10
+ps2_code[5] => Equal3.IN10
+ps2_code[6] => Equal0.IN9
+ps2_code[6] => Equal1.IN9
+ps2_code[6] => Equal2.IN9
+ps2_code[6] => Equal3.IN9
+ps2_code[7] => Equal0.IN8
+ps2_code[7] => Equal1.IN8
+ps2_code[7] => Equal2.IN8
+ps2_code[7] => Equal3.IN8
+player1UP <= player1UP~reg0.DB_MAX_OUTPUT_PORT_TYPE
+player1DOWN <= player1DOWN~reg0.DB_MAX_OUTPUT_PORT_TYPE
+player2UP <= player2UP~reg0.DB_MAX_OUTPUT_PORT_TYPE
+player2DOWN <= player2DOWN~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|ps2_keyboard:inst5
+clk => debounce:debounce_ps2_clk.clk
+clk => ps2_code[0]~reg0.CLK
+clk => ps2_code[1]~reg0.CLK
+clk => ps2_code[2]~reg0.CLK
+clk => ps2_code[3]~reg0.CLK
+clk => ps2_code[4]~reg0.CLK
+clk => ps2_code[5]~reg0.CLK
+clk => ps2_code[6]~reg0.CLK
+clk => ps2_code[7]~reg0.CLK
+clk => ps2_code_new~reg0.CLK
+clk => count_idle[0].CLK
+clk => count_idle[1].CLK
+clk => count_idle[2].CLK
+clk => count_idle[3].CLK
+clk => count_idle[4].CLK
+clk => count_idle[5].CLK
+clk => count_idle[6].CLK
+clk => count_idle[7].CLK
+clk => count_idle[8].CLK
+clk => count_idle[9].CLK
+clk => count_idle[10].CLK
+clk => count_idle[11].CLK
+clk => sync_ffs[0].CLK
+clk => sync_ffs[1].CLK
+clk => debounce:debounce_ps2_data.clk
+ps2_clk => sync_ffs[0].DATAIN
+ps2_data => sync_ffs[1].DATAIN
+ps2_code_new <= ps2_code_new~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ps2_code[0] <= ps2_code[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ps2_code[1] <= ps2_code[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ps2_code[2] <= ps2_code[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ps2_code[3] <= ps2_code[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ps2_code[4] <= ps2_code[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ps2_code[5] <= ps2_code[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ps2_code[6] <= ps2_code[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ps2_code[7] <= ps2_code[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|ps2_keyboard:inst5|debounce:debounce_ps2_clk
+clk => result~reg0.CLK
+clk => counter_out[0].CLK
+clk => counter_out[1].CLK
+clk => counter_out[2].CLK
+clk => counter_out[3].CLK
+clk => counter_out[4].CLK
+clk => counter_out[5].CLK
+clk => counter_out[6].CLK
+clk => counter_out[7].CLK
+clk => counter_out[8].CLK
+clk => flipflops[0].CLK
+clk => flipflops[1].CLK
+button => flipflops[0].DATAIN
+result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|ps2_keyboard:inst5|debounce:debounce_ps2_data
+clk => result~reg0.CLK
+clk => counter_out[0].CLK
+clk => counter_out[1].CLK
+clk => counter_out[2].CLK
+clk => counter_out[3].CLK
+clk => counter_out[4].CLK
+clk => counter_out[5].CLK
+clk => counter_out[6].CLK
+clk => counter_out[7].CLK
+clk => counter_out[8].CLK
+clk => flipflops[0].CLK
+clk => flipflops[1].CLK
+button => flipflops[0].DATAIN
+result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|debounce2:inst1
+click <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+clk => inst1.CLK
+pin_name1 => inst.DATAIN
+
+
+|Top|debounce2:inst7
+click <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+clk => inst1.CLK
+pin_name1 => inst.DATAIN
+
+
+|Top|debounce2:inst6
+click <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+clk => inst1.CLK
+pin_name1 => inst.DATAIN
+
+
+|Top|Display7Segmentos:inst9
+ledA <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A3 => FuncaoA:inst.A
+A3 => FuncaoB:inst4.A
+A3 => FuncaoC:inst5.A
+A3 => FuncaoD:inst6.A
+A3 => FuncaoE:inst7.A
+A3 => FuncaoG:inst9.A
+A3 => FuncaoF:inst8.A
+A2 => FuncaoA:inst.B
+A2 => FuncaoB:inst4.B
+A2 => FuncaoC:inst5.B
+A2 => FuncaoD:inst6.B
+A2 => FuncaoE:inst7.B
+A2 => FuncaoG:inst9.B
+A2 => FuncaoF:inst8.B
+A1 => FuncaoA:inst.C
+A1 => FuncaoB:inst4.C
+A1 => FuncaoC:inst5.C
+A1 => FuncaoD:inst6.C
+A1 => FuncaoE:inst7.C
+A1 => FuncaoG:inst9.C
+A1 => FuncaoF:inst8.C
+A0 => FuncaoA:inst.D
+A0 => FuncaoB:inst4.D
+A0 => FuncaoC:inst5.D
+A0 => FuncaoD:inst6.D
+A0 => FuncaoE:inst7.D
+A0 => FuncaoG:inst9.D
+A0 => FuncaoF:inst8.D
+ledB <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ledC <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ledD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+ledE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+ledG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+ledF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Display7Segmentos:inst9|FuncaoA:inst
+Fa <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst9.IN0
+A => inst4.IN0
+A => inst1.IN0
+C => inst.IN1
+C => inst3.IN1
+C => inst11.IN0
+D => inst12.IN0
+D => inst2.IN2
+B => inst3.IN0
+B => inst10.IN0
+B => inst2.IN1
+
+
+|Top|Display7Segmentos:inst9|FuncaoB:inst4
+Fb <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+C => inst5.IN0
+C => inst8.IN1
+A => inst3.IN0
+A => inst1.IN0
+D => inst6.IN0
+D => inst8.IN2
+D => inst1.IN2
+
+
+|Top|Display7Segmentos:inst9|FuncaoC:inst5
+Fc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst1.IN0
+C => inst8.IN0
+D => inst2.IN1
+D => inst4.IN1
+B => inst7.IN0
+B => inst3.IN1
+
+
+|Top|Display7Segmentos:inst9|FuncaoD:inst6
+Fd <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst11.IN0
+B => inst3.IN0
+B => inst9.IN0
+B => inst10.IN0
+D => inst4.IN0
+D => inst9.IN2
+D => inst8.IN2
+C => inst2.IN0
+C => inst8.IN1
+C => inst10.IN1
+
+
+|Top|Display7Segmentos:inst9|FuncaoE:inst7
+Fe <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst1.IN0
+C => inst5.IN0
+C => inst2.IN1
+D => inst3.IN0
+
+
+|Top|Display7Segmentos:inst9|FuncaoG:inst9
+Fg <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst4.IN0
+A => inst.IN0
+B => inst2.IN0
+B => inst9.IN1
+C => inst6.IN1
+C => inst3.IN0
+C => inst8.IN0
+D => inst4.IN1
+D => inst5.IN0
+
+
+|Top|Display7Segmentos:inst9|FuncaoF:inst8
+Fe <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+C => inst3.IN0
+C => inst9.IN1
+D => inst5.IN0
+A => inst9.IN0
+A => inst8.IN0
+A => inst.IN0
+B => inst1.IN0
+B => inst2.IN1
+B => inst10.IN0
+
+
+|Top|contador:inst3
+clk => counter2[0].CLK
+clk => counter2[1].CLK
+clk => counter2[2].CLK
+clk => counter2[3].CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+reset => counter2[0].ACLR
+reset => counter2[1].ACLR
+reset => counter2[2].ACLR
+reset => counter2[3].ACLR
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+valorA[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
+valorA[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
+valorA[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
+valorA[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
+valorB[0] <= counter2[0].DB_MAX_OUTPUT_PORT_TYPE
+valorB[1] <= counter2[1].DB_MAX_OUTPUT_PORT_TYPE
+valorB[2] <= counter2[2].DB_MAX_OUTPUT_PORT_TYPE
+valorB[3] <= counter2[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Display7Segmentos:inst10
+ledA <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A3 => FuncaoA:inst.A
+A3 => FuncaoB:inst4.A
+A3 => FuncaoC:inst5.A
+A3 => FuncaoD:inst6.A
+A3 => FuncaoE:inst7.A
+A3 => FuncaoG:inst9.A
+A3 => FuncaoF:inst8.A
+A2 => FuncaoA:inst.B
+A2 => FuncaoB:inst4.B
+A2 => FuncaoC:inst5.B
+A2 => FuncaoD:inst6.B
+A2 => FuncaoE:inst7.B
+A2 => FuncaoG:inst9.B
+A2 => FuncaoF:inst8.B
+A1 => FuncaoA:inst.C
+A1 => FuncaoB:inst4.C
+A1 => FuncaoC:inst5.C
+A1 => FuncaoD:inst6.C
+A1 => FuncaoE:inst7.C
+A1 => FuncaoG:inst9.C
+A1 => FuncaoF:inst8.C
+A0 => FuncaoA:inst.D
+A0 => FuncaoB:inst4.D
+A0 => FuncaoC:inst5.D
+A0 => FuncaoD:inst6.D
+A0 => FuncaoE:inst7.D
+A0 => FuncaoG:inst9.D
+A0 => FuncaoF:inst8.D
+ledB <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ledC <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ledD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+ledE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+ledG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+ledF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Display7Segmentos:inst10|FuncaoA:inst
+Fa <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst9.IN0
+A => inst4.IN0
+A => inst1.IN0
+C => inst.IN1
+C => inst3.IN1
+C => inst11.IN0
+D => inst12.IN0
+D => inst2.IN2
+B => inst3.IN0
+B => inst10.IN0
+B => inst2.IN1
+
+
+|Top|Display7Segmentos:inst10|FuncaoB:inst4
+Fb <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+C => inst5.IN0
+C => inst8.IN1
+A => inst3.IN0
+A => inst1.IN0
+D => inst6.IN0
+D => inst8.IN2
+D => inst1.IN2
+
+
+|Top|Display7Segmentos:inst10|FuncaoC:inst5
+Fc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst1.IN0
+C => inst8.IN0
+D => inst2.IN1
+D => inst4.IN1
+B => inst7.IN0
+B => inst3.IN1
+
+
+|Top|Display7Segmentos:inst10|FuncaoD:inst6
+Fd <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst11.IN0
+B => inst3.IN0
+B => inst9.IN0
+B => inst10.IN0
+D => inst4.IN0
+D => inst9.IN2
+D => inst8.IN2
+C => inst2.IN0
+C => inst8.IN1
+C => inst10.IN1
+
+
+|Top|Display7Segmentos:inst10|FuncaoE:inst7
+Fe <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst1.IN0
+C => inst5.IN0
+C => inst2.IN1
+D => inst3.IN0
+
+
+|Top|Display7Segmentos:inst10|FuncaoG:inst9
+Fg <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst4.IN0
+A => inst.IN0
+B => inst2.IN0
+B => inst9.IN1
+C => inst6.IN1
+C => inst3.IN0
+C => inst8.IN0
+D => inst4.IN1
+D => inst5.IN0
+
+
+|Top|Display7Segmentos:inst10|FuncaoF:inst8
+Fe <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+C => inst3.IN0
+C => inst9.IN1
+D => inst5.IN0
+A => inst9.IN0
+A => inst8.IN0
+A => inst.IN0
+B => inst1.IN0
+B => inst2.IN1
+B => inst10.IN0
+
+
+|Top|Display7Segmentos:inst11
+ledA <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A3 => FuncaoA:inst.A
+A3 => FuncaoB:inst4.A
+A3 => FuncaoC:inst5.A
+A3 => FuncaoD:inst6.A
+A3 => FuncaoE:inst7.A
+A3 => FuncaoG:inst9.A
+A3 => FuncaoF:inst8.A
+A2 => FuncaoA:inst.B
+A2 => FuncaoB:inst4.B
+A2 => FuncaoC:inst5.B
+A2 => FuncaoD:inst6.B
+A2 => FuncaoE:inst7.B
+A2 => FuncaoG:inst9.B
+A2 => FuncaoF:inst8.B
+A1 => FuncaoA:inst.C
+A1 => FuncaoB:inst4.C
+A1 => FuncaoC:inst5.C
+A1 => FuncaoD:inst6.C
+A1 => FuncaoE:inst7.C
+A1 => FuncaoG:inst9.C
+A1 => FuncaoF:inst8.C
+A0 => FuncaoA:inst.D
+A0 => FuncaoB:inst4.D
+A0 => FuncaoC:inst5.D
+A0 => FuncaoD:inst6.D
+A0 => FuncaoE:inst7.D
+A0 => FuncaoG:inst9.D
+A0 => FuncaoF:inst8.D
+ledB <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ledC <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ledD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+ledE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+ledG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+ledF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Display7Segmentos:inst11|FuncaoA:inst
+Fa <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst9.IN0
+A => inst4.IN0
+A => inst1.IN0
+C => inst.IN1
+C => inst3.IN1
+C => inst11.IN0
+D => inst12.IN0
+D => inst2.IN2
+B => inst3.IN0
+B => inst10.IN0
+B => inst2.IN1
+
+
+|Top|Display7Segmentos:inst11|FuncaoB:inst4
+Fb <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+C => inst5.IN0
+C => inst8.IN1
+A => inst3.IN0
+A => inst1.IN0
+D => inst6.IN0
+D => inst8.IN2
+D => inst1.IN2
+
+
+|Top|Display7Segmentos:inst11|FuncaoC:inst5
+Fc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst1.IN0
+C => inst8.IN0
+D => inst2.IN1
+D => inst4.IN1
+B => inst7.IN0
+B => inst3.IN1
+
+
+|Top|Display7Segmentos:inst11|FuncaoD:inst6
+Fd <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst11.IN0
+B => inst3.IN0
+B => inst9.IN0
+B => inst10.IN0
+D => inst4.IN0
+D => inst9.IN2
+D => inst8.IN2
+C => inst2.IN0
+C => inst8.IN1
+C => inst10.IN1
+
+
+|Top|Display7Segmentos:inst11|FuncaoE:inst7
+Fe <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst1.IN0
+C => inst5.IN0
+C => inst2.IN1
+D => inst3.IN0
+
+
+|Top|Display7Segmentos:inst11|FuncaoG:inst9
+Fg <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst4.IN0
+A => inst.IN0
+B => inst2.IN0
+B => inst9.IN1
+C => inst6.IN1
+C => inst3.IN0
+C => inst8.IN0
+D => inst4.IN1
+D => inst5.IN0
+
+
+|Top|Display7Segmentos:inst11|FuncaoF:inst8
+Fe <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+C => inst3.IN0
+C => inst9.IN1
+D => inst5.IN0
+A => inst9.IN0
+A => inst8.IN0
+A => inst.IN0
+B => inst1.IN0
+B => inst2.IN1
+B => inst10.IN0
+
+
+|Top|contador:inst8
+clk => counter2[0].CLK
+clk => counter2[1].CLK
+clk => counter2[2].CLK
+clk => counter2[3].CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+reset => counter2[0].ACLR
+reset => counter2[1].ACLR
+reset => counter2[2].ACLR
+reset => counter2[3].ACLR
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+valorA[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
+valorA[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
+valorA[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
+valorA[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
+valorB[0] <= counter2[0].DB_MAX_OUTPUT_PORT_TYPE
+valorB[1] <= counter2[1].DB_MAX_OUTPUT_PORT_TYPE
+valorB[2] <= counter2[2].DB_MAX_OUTPUT_PORT_TYPE
+valorB[3] <= counter2[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Display7Segmentos:inst13
+ledA <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A3 => FuncaoA:inst.A
+A3 => FuncaoB:inst4.A
+A3 => FuncaoC:inst5.A
+A3 => FuncaoD:inst6.A
+A3 => FuncaoE:inst7.A
+A3 => FuncaoG:inst9.A
+A3 => FuncaoF:inst8.A
+A2 => FuncaoA:inst.B
+A2 => FuncaoB:inst4.B
+A2 => FuncaoC:inst5.B
+A2 => FuncaoD:inst6.B
+A2 => FuncaoE:inst7.B
+A2 => FuncaoG:inst9.B
+A2 => FuncaoF:inst8.B
+A1 => FuncaoA:inst.C
+A1 => FuncaoB:inst4.C
+A1 => FuncaoC:inst5.C
+A1 => FuncaoD:inst6.C
+A1 => FuncaoE:inst7.C
+A1 => FuncaoG:inst9.C
+A1 => FuncaoF:inst8.C
+A0 => FuncaoA:inst.D
+A0 => FuncaoB:inst4.D
+A0 => FuncaoC:inst5.D
+A0 => FuncaoD:inst6.D
+A0 => FuncaoE:inst7.D
+A0 => FuncaoG:inst9.D
+A0 => FuncaoF:inst8.D
+ledB <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ledC <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ledD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+ledE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+ledG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+ledF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Display7Segmentos:inst13|FuncaoA:inst
+Fa <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst9.IN0
+A => inst4.IN0
+A => inst1.IN0
+C => inst.IN1
+C => inst3.IN1
+C => inst11.IN0
+D => inst12.IN0
+D => inst2.IN2
+B => inst3.IN0
+B => inst10.IN0
+B => inst2.IN1
+
+
+|Top|Display7Segmentos:inst13|FuncaoB:inst4
+Fb <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+C => inst5.IN0
+C => inst8.IN1
+A => inst3.IN0
+A => inst1.IN0
+D => inst6.IN0
+D => inst8.IN2
+D => inst1.IN2
+
+
+|Top|Display7Segmentos:inst13|FuncaoC:inst5
+Fc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst1.IN0
+C => inst8.IN0
+D => inst2.IN1
+D => inst4.IN1
+B => inst7.IN0
+B => inst3.IN1
+
+
+|Top|Display7Segmentos:inst13|FuncaoD:inst6
+Fd <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst11.IN0
+B => inst3.IN0
+B => inst9.IN0
+B => inst10.IN0
+D => inst4.IN0
+D => inst9.IN2
+D => inst8.IN2
+C => inst2.IN0
+C => inst8.IN1
+C => inst10.IN1
+
+
+|Top|Display7Segmentos:inst13|FuncaoE:inst7
+Fe <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst1.IN0
+C => inst5.IN0
+C => inst2.IN1
+D => inst3.IN0
+
+
+|Top|Display7Segmentos:inst13|FuncaoG:inst9
+Fg <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst4.IN0
+A => inst.IN0
+B => inst2.IN0
+B => inst9.IN1
+C => inst6.IN1
+C => inst3.IN0
+C => inst8.IN0
+D => inst4.IN1
+D => inst5.IN0
+
+
+|Top|Display7Segmentos:inst13|FuncaoF:inst8
+Fe <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+C => inst3.IN0
+C => inst9.IN1
+D => inst5.IN0
+A => inst9.IN0
+A => inst8.IN0
+A => inst.IN0
+B => inst1.IN0
+B => inst2.IN1
+B => inst10.IN0
+
+

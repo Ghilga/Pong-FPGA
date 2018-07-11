@@ -3,75 +3,39 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'Clk'
-Slack : -2.612
-TNS   : -39.767
-
-Type  : Slow 1200mV 85C Model Setup 'contador:inst2|umSeg'
-Slack : -0.067
-TNS   : -0.104
+Slack : -0.672
+TNS   : -4.945
 
 Type  : Slow 1200mV 85C Model Hold 'Clk'
-Slack : -0.139
-TNS   : -0.139
-
-Type  : Slow 1200mV 85C Model Hold 'contador:inst2|umSeg'
-Slack : 0.359
+Slack : 0.382
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clk'
 Slack : -3.000
-TNS   : -29.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'contador:inst2|umSeg'
-Slack : -1.000
-TNS   : -4.000
+TNS   : -11.000
 
 Type  : Slow 1200mV 0C Model Setup 'Clk'
-Slack : -2.242
-TNS   : -32.529
-
-Type  : Slow 1200mV 0C Model Setup 'contador:inst2|umSeg'
-Slack : 0.054
-TNS   : 0.000
+Slack : -0.485
+TNS   : -3.552
 
 Type  : Slow 1200mV 0C Model Hold 'Clk'
-Slack : -0.162
-TNS   : -0.162
-
-Type  : Slow 1200mV 0C Model Hold 'contador:inst2|umSeg'
-Slack : 0.312
+Slack : 0.333
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clk'
 Slack : -3.000
-TNS   : -29.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'contador:inst2|umSeg'
-Slack : -1.000
-TNS   : -4.000
+TNS   : -11.000
 
 Type  : Fast 1200mV 0C Model Setup 'Clk'
-Slack : -1.074
-TNS   : -11.859
-
-Type  : Fast 1200mV 0C Model Setup 'contador:inst2|umSeg'
-Slack : 0.398
+Slack : 0.073
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'Clk'
-Slack : -0.168
-TNS   : -0.168
-
-Type  : Fast 1200mV 0C Model Hold 'contador:inst2|umSeg'
-Slack : 0.187
+Slack : 0.201
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clk'
 Slack : -3.000
-TNS   : -30.598
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'contador:inst2|umSeg'
-Slack : -1.000
-TNS   : -4.000
+TNS   : -12.128
 
 ------------------------------------------------------------

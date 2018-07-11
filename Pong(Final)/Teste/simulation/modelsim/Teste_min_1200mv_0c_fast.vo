@@ -1,0 +1,176 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
+
+// DATE "07/07/2018 15:03:22"
+
+// 
+// Device: Altera EP3C16F484C6 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module clk_pixel (
+	clk,
+	clk_pixel);
+input 	clk;
+output 	clk_pixel;
+
+// Design Ports Information
+// clk_pixel	=>  Location: PIN_E4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("Teste_min_1200mv_0c_v_fast.sdo");
+// synopsys translate_on
+
+wire \clk_pixel~output_o ;
+wire \clk~input_o ;
+wire \clk~inputclkctrl_outclk ;
+wire \cnt~0_combout ;
+wire \cnt~q ;
+wire \clk_pixel~0_combout ;
+wire \clk_pixel~reg0_q ;
+
+
+// Location: IOOBUF_X0_Y26_N2
+cycloneiii_io_obuf \clk_pixel~output (
+	.i(\clk_pixel~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\clk_pixel~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \clk_pixel~output .bus_hold = "false";
+defparam \clk_pixel~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y14_N1
+cycloneiii_io_ibuf \clk~input (
+	.i(clk),
+	.ibar(gnd),
+	.o(\clk~input_o ));
+// synopsys translate_off
+defparam \clk~input .bus_hold = "false";
+defparam \clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G4
+cycloneiii_clkctrl \clk~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\clk~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\clk~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \clk~inputclkctrl .clock_type = "global clock";
+defparam \clk~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y26_N2
+cycloneiii_lcell_comb \cnt~0 (
+// Equation(s):
+// \cnt~0_combout  = !\cnt~q 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\cnt~q ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\cnt~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \cnt~0 .lut_mask = 16'h0F0F;
+defparam \cnt~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y26_N3
+dffeas cnt(
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\cnt~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\cnt~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam cnt.is_wysiwyg = "true";
+defparam cnt.power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y26_N16
+cycloneiii_lcell_comb \clk_pixel~0 (
+// Equation(s):
+// \clk_pixel~0_combout  = \clk_pixel~reg0_q  $ (\cnt~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\clk_pixel~reg0_q ),
+	.datad(\cnt~q ),
+	.cin(gnd),
+	.combout(\clk_pixel~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \clk_pixel~0 .lut_mask = 16'h0FF0;
+defparam \clk_pixel~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y26_N17
+dffeas \clk_pixel~reg0 (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\clk_pixel~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clk_pixel~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clk_pixel~reg0 .is_wysiwyg = "true";
+defparam \clk_pixel~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign clk_pixel = \clk_pixel~output_o ;
+
+endmodule
